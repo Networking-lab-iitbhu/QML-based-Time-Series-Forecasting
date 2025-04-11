@@ -1,0 +1,44 @@
+==========================================
+SLURM_CLUSTER_NAME = param-shivay
+SLURM_JOB_ACCOUNT = comp_sci_engg
+SLURM_JOB_ID = 1017725
+SLURM_JOB_NAME = printjob
+SLURM_JOB_NODELIST = cn001
+SLURM_JOB_USER = soumyadeep.das.cse21.itbhu
+SLURM_JOB_UID = 5621
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 7539
+SLURM_SUBMIT_DIR = /home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 7539
+==========================================
+hello world
+module loaded
+env loaded
+python is running
+
+ Training Encoder...
+
+Encoder Loss: 0.028 Iteration: 20
+Encoder Loss: 0.028 Iteration: 40
+Encoder Loss: 0.029 Iteration: 60
+Encoder Loss: 0.029 Iteration: 80
+Encoder Loss: 0.032 Iteration: 100
+Encoder Loss: 0.03 Iteration: 120
+Encoder Loss: 0.032 Iteration: 140
+Encoder Loss: 0.032 Iteration: 160
+Encoder Loss: 0.028 Iteration: 180
+Encoder Loss: 0.03 Iteration: 200
+Encoder Loss: 0.031 Iteration: 220
+Encoder Loss: 0.03 Iteration: 240
+Encoder Loss: 0.029 Iteration: 260
+Encoder Loss: 0.026 Iteration: 280
+Encoder Loss: 0.03 Iteration: 300
+Training Started... 
+0: 0.17576733231544495
+Training Epoch 0
+train_metrics: 
+R2: -9.707871437072754
+MSE: 1151153.125
+test metrics:

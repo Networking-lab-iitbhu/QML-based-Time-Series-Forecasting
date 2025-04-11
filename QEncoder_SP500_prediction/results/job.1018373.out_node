@@ -1,0 +1,2753 @@
+==========================================
+SLURM_CLUSTER_NAME = param-shivay
+SLURM_JOB_ACCOUNT = comp_sci_engg
+SLURM_JOB_ID = 1018373
+SLURM_JOB_NAME = printjob
+SLURM_JOB_NODELIST = cn001
+SLURM_JOB_USER = soumyadeep.das.cse21.itbhu
+SLURM_JOB_UID = 5621
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 350934
+SLURM_SUBMIT_DIR = /home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL
+SLURM_CPUS_ON_NODE = 5
+SLURM_NTASKS = 
+SLURM_TASK_PID = 350934
+==========================================
+hello world
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                40
+On-line CPU(s) list:   0-39
+Thread(s) per core:    1
+Core(s) per socket:    20
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 85
+Model name:            Intel(R) Xeon(R) Gold 6148 CPU @ 2.40GHz
+Stepping:              4
+CPU MHz:               2400.000
+BogoMIPS:              4800.00
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              1024K
+L3 cache:              28160K
+NUMA node0 CPU(s):     0-19
+NUMA node1 CPU(s):     20-39
+Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch epb cat_l3 cdp_l3 intel_ppin intel_pt ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke spec_ctrl intel_stibp flush_l1d
+              total        used        free      shared  buff/cache   available
+Mem:           187G        7.0G        160G        3.5G         20G        173G
+Swap:            0B          0B          0B
+module loaded
+env loaded
+python is running
+args.num_latent=4
+args.num_trash=6
+
+ Training Encoder...
+
+Encoder Loss: 0.165 Iteration: 1
+Encoder Loss: 0.118 Iteration: 2
+Encoder Loss: 0.079 Iteration: 3
+Encoder Loss: 0.068 Iteration: 4
+Encoder Loss: 0.058 Iteration: 5
+Encoder Loss: 0.061 Iteration: 6
+Encoder Loss: 0.056 Iteration: 7
+Encoder Loss: 0.055 Iteration: 8
+Encoder Loss: 0.057 Iteration: 9
+Encoder Loss: 0.055 Iteration: 10
+Encoder Loss: 0.059 Iteration: 11
+Encoder Loss: 0.06 Iteration: 12
+Encoder Loss: 0.057 Iteration: 13
+Encoder Loss: 0.054 Iteration: 14
+Encoder Loss: 0.052 Iteration: 15
+Encoder Loss: 0.059 Iteration: 16
+Encoder Loss: 0.057 Iteration: 17
+Encoder Loss: 0.059 Iteration: 18
+Encoder Loss: 0.059 Iteration: 19
+Encoder Loss: 0.055 Iteration: 20
+Encoder Loss: 0.053 Iteration: 21
+Encoder Loss: 0.052 Iteration: 22
+Encoder Loss: 0.058 Iteration: 23
+Encoder Loss: 0.055 Iteration: 24
+Encoder Loss: 0.05 Iteration: 25
+Encoder Loss: 0.059 Iteration: 26
+Encoder Loss: 0.055 Iteration: 27
+Encoder Loss: 0.059 Iteration: 28
+Encoder Loss: 0.057 Iteration: 29
+Encoder Loss: 0.053 Iteration: 30
+Encoder Loss: 0.058 Iteration: 31
+Encoder Loss: 0.057 Iteration: 32
+Encoder Loss: 0.051 Iteration: 33
+Encoder Loss: 0.053 Iteration: 34
+Encoder Loss: 0.061 Iteration: 35
+Encoder Loss: 0.052 Iteration: 36
+Encoder Loss: 0.057 Iteration: 37
+Encoder Loss: 0.057 Iteration: 38
+Encoder Loss: 0.057 Iteration: 39
+Encoder Loss: 0.061 Iteration: 40
+Encoder Loss: 0.054 Iteration: 41
+Encoder Loss: 0.06 Iteration: 42
+Encoder Loss: 0.052 Iteration: 43
+Encoder Loss: 0.06 Iteration: 44
+Encoder Loss: 0.049 Iteration: 45
+Encoder Loss: 0.061 Iteration: 46
+Encoder Loss: 0.058 Iteration: 47
+Encoder Loss: 0.057 Iteration: 48
+Encoder Loss: 0.055 Iteration: 49
+Encoder Loss: 0.061 Iteration: 50
+Encoder Loss: 0.057 Iteration: 51
+Encoder Loss: 0.055 Iteration: 52
+Encoder Loss: 0.059 Iteration: 53
+Encoder Loss: 0.05 Iteration: 54
+Encoder Loss: 0.051 Iteration: 55
+Encoder Loss: 0.054 Iteration: 56
+Encoder Loss: 0.06 Iteration: 57
+Encoder Loss: 0.057 Iteration: 58
+Encoder Loss: 0.059 Iteration: 59
+Encoder Loss: 0.055 Iteration: 60
+Encoder Loss: 0.055 Iteration: 61
+Encoder Loss: 0.057 Iteration: 62
+Encoder Loss: 0.055 Iteration: 63
+Encoder Loss: 0.055 Iteration: 64
+Encoder Loss: 0.057 Iteration: 65
+Encoder Loss: 0.054 Iteration: 66
+Encoder Loss: 0.053 Iteration: 67
+Encoder Loss: 0.058 Iteration: 68
+Encoder Loss: 0.055 Iteration: 69
+Encoder Loss: 0.057 Iteration: 70
+Encoder Loss: 0.055 Iteration: 71
+Encoder Loss: 0.055 Iteration: 72
+Encoder Loss: 0.053 Iteration: 73
+Encoder Loss: 0.058 Iteration: 74
+Encoder Loss: 0.054 Iteration: 75
+Encoder Loss: 0.051 Iteration: 76
+Encoder Loss: 0.053 Iteration: 77
+Encoder Loss: 0.054 Iteration: 78
+Encoder Loss: 0.055 Iteration: 79
+Encoder Loss: 0.055 Iteration: 80
+Encoder Loss: 0.055 Iteration: 81
+Encoder Loss: 0.058 Iteration: 82
+Encoder Loss: 0.056 Iteration: 83
+Encoder Loss: 0.056 Iteration: 84
+Encoder Loss: 0.053 Iteration: 85
+Encoder Loss: 0.059 Iteration: 86
+Encoder Loss: 0.057 Iteration: 87
+Encoder Loss: 0.053 Iteration: 88
+Encoder Loss: 0.063 Iteration: 89
+Encoder Loss: 0.056 Iteration: 90
+Encoder Loss: 0.054 Iteration: 91
+Encoder Loss: 0.056 Iteration: 92
+Encoder Loss: 0.05 Iteration: 93
+Encoder Loss: 0.062 Iteration: 94
+Encoder Loss: 0.057 Iteration: 95
+Encoder Loss: 0.055 Iteration: 96
+Encoder Loss: 0.061 Iteration: 97
+Encoder Loss: 0.061 Iteration: 98
+Encoder Loss: 0.058 Iteration: 99
+Encoder Loss: 0.056 Iteration: 100
+Encoder Loss: 0.061 Iteration: 101
+Encoder Loss: 0.053 Iteration: 102
+Encoder Loss: 0.048 Iteration: 103
+Encoder Loss: 0.058 Iteration: 104
+Encoder Loss: 0.063 Iteration: 105
+Encoder Loss: 0.053 Iteration: 106
+Encoder Loss: 0.058 Iteration: 107
+Encoder Loss: 0.056 Iteration: 108
+Encoder Loss: 0.055 Iteration: 109
+Encoder Loss: 0.055 Iteration: 110
+Encoder Loss: 0.054 Iteration: 111
+Encoder Loss: 0.056 Iteration: 112
+Encoder Loss: 0.057 Iteration: 113
+Encoder Loss: 0.06 Iteration: 114
+Encoder Loss: 0.059 Iteration: 115
+Encoder Loss: 0.058 Iteration: 116
+Encoder Loss: 0.056 Iteration: 117
+Encoder Loss: 0.057 Iteration: 118
+Encoder Loss: 0.054 Iteration: 119
+Encoder Loss: 0.057 Iteration: 120
+Encoder Loss: 0.057 Iteration: 121
+Encoder Loss: 0.053 Iteration: 122
+Encoder Loss: 0.054 Iteration: 123
+Encoder Loss: 0.058 Iteration: 124
+Encoder Loss: 0.054 Iteration: 125
+Encoder Loss: 0.053 Iteration: 126
+Encoder Loss: 0.053 Iteration: 127
+Encoder Loss: 0.06 Iteration: 128
+Encoder Loss: 0.051 Iteration: 129
+Encoder Loss: 0.051 Iteration: 130
+Encoder Loss: 0.056 Iteration: 131
+Encoder Loss: 0.056 Iteration: 132
+Encoder Loss: 0.053 Iteration: 133
+Encoder Loss: 0.054 Iteration: 134
+Encoder Loss: 0.057 Iteration: 135
+Encoder Loss: 0.058 Iteration: 136
+Encoder Loss: 0.057 Iteration: 137
+Encoder Loss: 0.052 Iteration: 138
+Encoder Loss: 0.049 Iteration: 139
+Encoder Loss: 0.055 Iteration: 140
+Encoder Loss: 0.056 Iteration: 141
+Encoder Loss: 0.06 Iteration: 142
+Encoder Loss: 0.055 Iteration: 143
+Encoder Loss: 0.054 Iteration: 144
+Encoder Loss: 0.052 Iteration: 145
+Encoder Loss: 0.057 Iteration: 146
+Encoder Loss: 0.053 Iteration: 147
+Encoder Loss: 0.059 Iteration: 148
+Encoder Loss: 0.057 Iteration: 149
+Encoder Loss: 0.054 Iteration: 150
+Encoder Loss: 0.057 Iteration: 151
+Encoder Loss: 0.056 Iteration: 152
+Encoder Loss: 0.056 Iteration: 153
+Encoder Loss: 0.059 Iteration: 154
+Encoder Loss: 0.057 Iteration: 155
+Encoder Loss: 0.062 Iteration: 156
+Encoder Loss: 0.057 Iteration: 157
+Encoder Loss: 0.057 Iteration: 158
+Encoder Loss: 0.056 Iteration: 159
+Encoder Loss: 0.06 Iteration: 160
+Encoder Loss: 0.057 Iteration: 161
+Encoder Loss: 0.05 Iteration: 162
+Encoder Loss: 0.052 Iteration: 163
+Encoder Loss: 0.055 Iteration: 164
+Encoder Loss: 0.057 Iteration: 165
+Encoder Loss: 0.059 Iteration: 166
+Encoder Loss: 0.05 Iteration: 167
+Encoder Loss: 0.056 Iteration: 168
+Encoder Loss: 0.056 Iteration: 169
+Encoder Loss: 0.062 Iteration: 170
+Encoder Loss: 0.057 Iteration: 171
+Encoder Loss: 0.056 Iteration: 172
+Encoder Loss: 0.05 Iteration: 173
+Encoder Loss: 0.056 Iteration: 174
+Encoder Loss: 0.057 Iteration: 175
+Encoder Loss: 0.051 Iteration: 176
+Encoder Loss: 0.058 Iteration: 177
+Encoder Loss: 0.059 Iteration: 178
+Encoder Loss: 0.049 Iteration: 179
+Encoder Loss: 0.057 Iteration: 180
+Encoder Loss: 0.059 Iteration: 181
+Encoder Loss: 0.058 Iteration: 182
+Encoder Loss: 0.058 Iteration: 183
+Encoder Loss: 0.061 Iteration: 184
+Encoder Loss: 0.059 Iteration: 185
+Encoder Loss: 0.048 Iteration: 186
+Encoder Loss: 0.054 Iteration: 187
+Encoder Loss: 0.055 Iteration: 188
+Encoder Loss: 0.058 Iteration: 189
+Encoder Loss: 0.058 Iteration: 190
+Encoder Loss: 0.058 Iteration: 191
+Encoder Loss: 0.053 Iteration: 192
+Encoder Loss: 0.055 Iteration: 193
+Encoder Loss: 0.063 Iteration: 194
+Encoder Loss: 0.055 Iteration: 195
+Encoder Loss: 0.06 Iteration: 196
+Encoder Loss: 0.048 Iteration: 197
+Encoder Loss: 0.056 Iteration: 198
+Encoder Loss: 0.053 Iteration: 199
+Encoder Loss: 0.06 Iteration: 200
+Encoder Loss: 0.056 Iteration: 201
+Encoder Loss: 0.052 Iteration: 202
+Encoder Loss: 0.062 Iteration: 203
+Encoder Loss: 0.058 Iteration: 204
+Encoder Loss: 0.058 Iteration: 205
+Encoder Loss: 0.056 Iteration: 206
+Encoder Loss: 0.053 Iteration: 207
+Encoder Loss: 0.06 Iteration: 208
+Encoder Loss: 0.055 Iteration: 209
+Encoder Loss: 0.059 Iteration: 210
+Encoder Loss: 0.05 Iteration: 211
+Encoder Loss: 0.059 Iteration: 212
+Encoder Loss: 0.057 Iteration: 213
+Encoder Loss: 0.056 Iteration: 214
+Encoder Loss: 0.056 Iteration: 215
+Encoder Loss: 0.057 Iteration: 216
+Encoder Loss: 0.059 Iteration: 217
+Encoder Loss: 0.053 Iteration: 218
+Encoder Loss: 0.059 Iteration: 219
+Encoder Loss: 0.057 Iteration: 220
+Encoder Loss: 0.059 Iteration: 221
+Encoder Loss: 0.056 Iteration: 222
+Encoder Loss: 0.06 Iteration: 223
+Encoder Loss: 0.059 Iteration: 224
+Encoder Loss: 0.059 Iteration: 225
+Encoder Loss: 0.051 Iteration: 226
+Encoder Loss: 0.056 Iteration: 227
+Encoder Loss: 0.058 Iteration: 228
+Encoder Loss: 0.051 Iteration: 229
+Encoder Loss: 0.054 Iteration: 230
+Encoder Loss: 0.053 Iteration: 231
+Encoder Loss: 0.055 Iteration: 232
+Encoder Loss: 0.058 Iteration: 233
+Encoder Loss: 0.046 Iteration: 234
+Encoder Loss: 0.061 Iteration: 235
+Encoder Loss: 0.054 Iteration: 236
+Encoder Loss: 0.058 Iteration: 237
+Encoder Loss: 0.058 Iteration: 238
+Encoder Loss: 0.057 Iteration: 239
+Encoder Loss: 0.054 Iteration: 240
+Encoder Loss: 0.055 Iteration: 241
+Encoder Loss: 0.054 Iteration: 242
+Encoder Loss: 0.055 Iteration: 243
+Encoder Loss: 0.054 Iteration: 244
+Encoder Loss: 0.054 Iteration: 245
+Encoder Loss: 0.055 Iteration: 246
+Encoder Loss: 0.057 Iteration: 247
+Encoder Loss: 0.059 Iteration: 248
+Encoder Loss: 0.054 Iteration: 249
+Encoder Loss: 0.057 Iteration: 250
+Encoder Loss: 0.06 Iteration: 251
+Encoder Loss: 0.054 Iteration: 252
+Encoder Loss: 0.056 Iteration: 253
+Encoder Loss: 0.055 Iteration: 254
+Encoder Loss: 0.054 Iteration: 255
+Encoder Loss: 0.058 Iteration: 256
+Encoder Loss: 0.06 Iteration: 257
+Encoder Loss: 0.058 Iteration: 258
+Encoder Loss: 0.055 Iteration: 259
+Encoder Loss: 0.054 Iteration: 260
+Encoder Loss: 0.058 Iteration: 261
+Encoder Loss: 0.059 Iteration: 262
+Encoder Loss: 0.059 Iteration: 263
+Encoder Loss: 0.059 Iteration: 264
+Encoder Loss: 0.056 Iteration: 265
+Encoder Loss: 0.054 Iteration: 266
+Encoder Loss: 0.057 Iteration: 267
+Encoder Loss: 0.054 Iteration: 268
+Encoder Loss: 0.061 Iteration: 269
+Encoder Loss: 0.061 Iteration: 270
+Encoder Loss: 0.055 Iteration: 271
+Encoder Loss: 0.057 Iteration: 272
+Encoder Loss: 0.053 Iteration: 273
+Encoder Loss: 0.059 Iteration: 274
+Encoder Loss: 0.059 Iteration: 275
+Encoder Loss: 0.065 Iteration: 276
+Encoder Loss: 0.056 Iteration: 277
+Encoder Loss: 0.058 Iteration: 278
+Encoder Loss: 0.056 Iteration: 279
+Encoder Loss: 0.057 Iteration: 280
+Encoder Loss: 0.057 Iteration: 281
+Encoder Loss: 0.053 Iteration: 282
+Encoder Loss: 0.053 Iteration: 283
+Encoder Loss: 0.051 Iteration: 284
+Encoder Loss: 0.057 Iteration: 285
+Encoder Loss: 0.056 Iteration: 286
+Encoder Loss: 0.059 Iteration: 287
+Encoder Loss: 0.059 Iteration: 288
+Encoder Loss: 0.058 Iteration: 289
+Encoder Loss: 0.051 Iteration: 290
+Encoder Loss: 0.06 Iteration: 291
+Encoder Loss: 0.054 Iteration: 292
+Encoder Loss: 0.058 Iteration: 293
+Encoder Loss: 0.059 Iteration: 294
+Encoder Loss: 0.059 Iteration: 295
+Encoder Loss: 0.056 Iteration: 296
+Encoder Loss: 0.055 Iteration: 297
+Encoder Loss: 0.059 Iteration: 298
+Encoder Loss: 0.052 Iteration: 299
+Encoder Loss: 0.053 Iteration: 300
+Training Started... 
+0: 0.1714094579219818
+Training Epoch 0
+train_metrics: 
+R2: -7.858031272888184
+MSE: 1122612.0
+MAPE: 0.5323894023895264
+test metrics:
+R2: -11.264082908630371
+MSE: 1276288.0
+MAPE: 0.6371111869812012
+before val features
+MSE diff_p 0
+----------
+1: 0.06671769171953201
+Training Epoch 1
+train_metrics: 
+R2: -888.5684204101562
+MSE: 436954.21875
+MAPE: 0.4503534436225891
+test metrics:
+R2: -566.0020751953125
+MSE: 530752.1875
+MAPE: 0.5241860747337341
+MSE diff_p 1
+----------
+2: 0.055339980870485306
+Training Epoch 2
+train_metrics: 
+R2: -97.45368194580078
+MSE: 362438.15625
+MAPE: 0.41058966517448425
+test metrics:
+R2: -137.2297821044922
+MSE: 493986.09375
+MAPE: 0.5055537819862366
+MSE diff_p 2
+----------
+3: 0.04190584644675255
+Training Epoch 3
+train_metrics: 
+R2: -25.122377395629883
+MSE: 274454.0
+MAPE: 0.35833579301834106
+test metrics:
+R2: -39.1084098815918
+MSE: 431260.59375
+MAPE: 0.4825270473957062
+MSE diff_p 3
+----------
+4: 0.0382232703268528
+Training Epoch 4
+train_metrics: 
+R2: -9.109769821166992
+MSE: 250335.6875
+MAPE: 0.36947980523109436
+test metrics:
+R2: -12.666169166564941
+MSE: 338073.28125
+MAPE: 0.4544435143470764
+MSE diff_p 4
+----------
+5: 0.03359341248869896
+Training Epoch 5
+train_metrics: 
+R2: -4.7887163162231445
+MSE: 220013.359375
+MAPE: 0.33437439799308777
+test metrics:
+R2: -6.561715602874756
+MSE: 303641.96875
+MAPE: 0.4328862130641937
+MSE diff_p 5
+----------
+6: 0.026819776743650436
+Training Epoch 6
+train_metrics: 
+R2: -3.0546865463256836
+MSE: 175650.78125
+MAPE: 0.31021231412887573
+test metrics:
+R2: -6.06842041015625
+MSE: 283686.53125
+MAPE: 0.4322482943534851
+MSE diff_p 6
+----------
+7: 0.022009164094924927
+Training Epoch 7
+train_metrics: 
+R2: -0.8786555528640747
+MSE: 144144.640625
+MAPE: 0.2779054045677185
+test metrics:
+R2: -1.6408910751342773
+MSE: 210835.46875
+MAPE: 0.3836049437522888
+MSE diff_p 7
+----------
+8: 0.018396474421024323
+Training Epoch 8
+train_metrics: 
+R2: -0.18954086303710938
+MSE: 120484.03125
+MAPE: 0.25565046072006226
+test metrics:
+R2: -0.9444261789321899
+MSE: 184965.890625
+MAPE: 0.3599686324596405
+MSE diff_p 8
+----------
+9: 0.01664835587143898
+Training Epoch 9
+train_metrics: 
+R2: 0.11968421936035156
+MSE: 109035.0859375
+MAPE: 0.22843636572360992
+test metrics:
+R2: -0.231545090675354
+MSE: 153360.234375
+MAPE: 0.33815643191337585
+MSE diff_p 9
+----------
+10: 0.014872947707772255
+Training Epoch 10
+train_metrics: 
+R2: 0.3368578553199768
+MSE: 97407.40625
+MAPE: 0.23055535554885864
+test metrics:
+R2: 0.025562644004821777
+MSE: 137603.921875
+MAPE: 0.3148327171802521
+MSE diff_p 10
+----------
+11: 0.010248358361423016
+Training Epoch 11
+train_metrics: 
+R2: 0.5772867798805237
+MSE: 67119.578125
+MAPE: 0.20179447531700134
+test metrics:
+R2: 0.2812509536743164
+MSE: 118957.65625
+MAPE: 0.29831650853157043
+MSE diff_p 11
+----------
+12: 0.01003047451376915
+Training Epoch 12
+train_metrics: 
+R2: 0.6428866982460022
+MSE: 65692.59375
+MAPE: 0.20507660508155823
+test metrics:
+R2: 0.41387271881103516
+MSE: 107146.0234375
+MAPE: 0.26634109020233154
+MSE diff_p 12
+----------
+13: 0.009150468744337559
+Training Epoch 13
+train_metrics: 
+R2: 0.6767473220825195
+MSE: 59929.16796875
+MAPE: 0.16747604310512543
+test metrics:
+R2: 0.5117008686065674
+MSE: 98332.15625
+MAPE: 0.2742606997489929
+MSE diff_p 13
+----------
+14: 0.009217755869030952
+Training Epoch 14
+train_metrics: 
+R2: 0.7184532880783081
+MSE: 60369.8515625
+MAPE: 0.18530216813087463
+test metrics:
+R2: 0.6018762588500977
+MSE: 86903.328125
+MAPE: 0.2366565465927124
+MSE diff_p 14
+----------
+15: 0.008521887473762035
+Training Epoch 15
+train_metrics: 
+R2: 0.7497600317001343
+MSE: 55812.40625
+MAPE: 0.1777641922235489
+test metrics:
+R2: 0.6401561498641968
+MSE: 83484.3203125
+MAPE: 0.26025503873825073
+MSE diff_p 15
+----------
+16: 0.00571272149682045
+Training Epoch 16
+train_metrics: 
+R2: 0.8379257321357727
+MSE: 37414.3359375
+MAPE: 0.15595975518226624
+test metrics:
+R2: 0.7119306325912476
+MSE: 71956.75
+MAPE: 0.21288156509399414
+MSE diff_p 16
+----------
+17: 0.0061979349702596664
+Training Epoch 17
+train_metrics: 
+R2: 0.8301773071289062
+MSE: 40592.13671875
+MAPE: 0.16142305731773376
+test metrics:
+R2: 0.7203778028488159
+MSE: 72275.7890625
+MAPE: 0.2459757775068283
+MSE diff_p 17
+----------
+18: 0.006521536968648434
+Training Epoch 18
+train_metrics: 
+R2: 0.8305156230926514
+MSE: 42711.5078125
+MAPE: 0.18243467807769775
+test metrics:
+R2: 0.7617601156234741
+MSE: 64435.3515625
+MAPE: 0.2045082151889801
+MSE diff_p 18
+----------
+19: 0.006326743401587009
+Training Epoch 19
+train_metrics: 
+R2: 0.8295130729675293
+MSE: 41435.74609375
+MAPE: 0.18145647644996643
+test metrics:
+R2: 0.7466325759887695
+MSE: 69161.6796875
+MAPE: 0.2502303421497345
+MSE diff_p 19
+----------
+20: 0.008723832666873932
+Training Epoch 20
+train_metrics: 
+R2: 0.7770999073982239
+MSE: 57135.0
+MAPE: 0.2383413016796112
+test metrics:
+R2: 0.7700642347335815
+MSE: 64490.6015625
+MAPE: 0.22024327516555786
+MSE diff_p 20
+----------
+21: 0.0072516221553087234
+Training Epoch 21
+train_metrics: 
+R2: 0.7981053590774536
+MSE: 47493.0625
+MAPE: 0.17455074191093445
+test metrics:
+R2: 0.7531965970993042
+MSE: 68311.9609375
+MAPE: 0.2537752687931061
+MSE diff_p 21
+----------
+22: 0.006798500195145607
+Training Epoch 22
+train_metrics: 
+R2: 0.8382526636123657
+MSE: 44525.42578125
+MAPE: 0.1862647533416748
+test metrics:
+R2: 0.8083996772766113
+MSE: 55615.046875
+MAPE: 0.20172236859798431
+MSE diff_p 22
+----------
+23: 0.005388726480305195
+Training Epoch 23
+train_metrics: 
+R2: 0.8743333220481873
+MSE: 35292.390625
+MAPE: 0.1515316218137741
+test metrics:
+R2: 0.8199061155319214
+MSE: 53880.06640625
+MAPE: 0.2197861522436142
+MSE diff_p 23
+----------
+24: 0.004695276264101267
+Training Epoch 24
+train_metrics: 
+R2: 0.8863896727561951
+MSE: 30750.76953125
+MAPE: 0.1554901897907257
+test metrics:
+R2: 0.8538150787353516
+MSE: 45595.4375
+MAPE: 0.17930199205875397
+MSE diff_p 24
+----------
+25: 0.004594075493514538
+Training Epoch 25
+train_metrics: 
+R2: 0.8950559496879578
+MSE: 30087.982421875
+MAPE: 0.15429526567459106
+test metrics:
+R2: 0.8620504140853882
+MSE: 43887.23828125
+MAPE: 0.18486808240413666
+MSE diff_p 25
+----------
+26: 0.003937652334570885
+Training Epoch 26
+train_metrics: 
+R2: 0.9135326743125916
+MSE: 25788.869140625
+MAPE: 0.11754243075847626
+test metrics:
+R2: 0.873030424118042
+MSE: 41279.96484375
+MAPE: 0.17212846875190735
+MSE diff_p 26
+----------
+27: 0.004122816491872072
+Training Epoch 27
+train_metrics: 
+R2: 0.9086132645606995
+MSE: 27001.564453125
+MAPE: 0.1284022033214569
+test metrics:
+R2: 0.8727596402168274
+MSE: 41644.96484375
+MAPE: 0.18645215034484863
+MSE diff_p 27
+----------
+28: 0.003701413981616497
+Training Epoch 28
+train_metrics: 
+R2: 0.92551189661026
+MSE: 24241.677734375
+MAPE: 0.1335221529006958
+test metrics:
+R2: 0.884960949420929
+MSE: 38304.421875
+MAPE: 0.16946743428707123
+MSE diff_p 28
+----------
+29: 0.003713233396410942
+Training Epoch 29
+train_metrics: 
+R2: 0.9198108911514282
+MSE: 24319.078125
+MAPE: 0.12336298823356628
+test metrics:
+R2: 0.8809826374053955
+MSE: 39920.92578125
+MAPE: 0.1884002685546875
+MSE diff_p 29
+----------
+30: 0.003337124828249216
+Training Epoch 30
+train_metrics: 
+R2: 0.9312898516654968
+MSE: 21855.83203125
+MAPE: 0.15337690711021423
+test metrics:
+R2: 0.8928444981575012
+MSE: 36252.296875
+MAPE: 0.16866116225719452
+MSE diff_p 30
+----------
+31: 0.0038639039266854525
+Training Epoch 31
+train_metrics: 
+R2: 0.9213641285896301
+MSE: 25305.8671875
+MAPE: 0.14095871150493622
+test metrics:
+R2: 0.8923482894897461
+MSE: 36761.4140625
+MAPE: 0.1797143518924713
+MSE diff_p 31
+----------
+32: 0.003430706448853016
+Training Epoch 32
+train_metrics: 
+R2: 0.9283478856086731
+MSE: 22468.7265625
+MAPE: 0.14482200145721436
+test metrics:
+R2: 0.9020829200744629
+MSE: 34094.70703125
+MAPE: 0.16342173516750336
+MSE diff_p 32
+----------
+33: 0.0032569565810263157
+Training Epoch 33
+train_metrics: 
+R2: 0.9332036972045898
+MSE: 21330.7890625
+MAPE: 0.11604437977075577
+test metrics:
+R2: 0.8862590789794922
+MSE: 39190.2890625
+MAPE: 0.19813376665115356
+MSE diff_p 33
+----------
+34: 0.004849536344408989
+Training Epoch 34
+train_metrics: 
+R2: 0.9066909551620483
+MSE: 31761.07421875
+MAPE: 0.1940513253211975
+test metrics:
+R2: 0.8926634192466736
+MSE: 37020.02734375
+MAPE: 0.17862969636917114
+MSE diff_p 34
+----------
+35: 0.00527360662817955
+Training Epoch 35
+train_metrics: 
+R2: 0.8814061284065247
+MSE: 34538.4375
+MAPE: 0.16741615533828735
+test metrics:
+R2: 0.8495395183563232
+MSE: 50660.8671875
+MAPE: 0.2377162128686905
+MSE diff_p 35
+----------
+36: 0.0053657041862607
+Training Epoch 36
+train_metrics: 
+R2: 0.8716678619384766
+MSE: 35141.609375
+MAPE: 0.22662892937660217
+test metrics:
+R2: 0.8514976501464844
+MSE: 48565.01171875
+MAPE: 0.2217259407043457
+MSE diff_p 36
+----------
+37: 0.004866229370236397
+Training Epoch 37
+train_metrics: 
+R2: 0.8857382535934448
+MSE: 31870.39453125
+MAPE: 0.15299087762832642
+test metrics:
+R2: 0.8413790464401245
+MSE: 50045.0
+MAPE: 0.2331913709640503
+MSE diff_p 37
+----------
+38: 0.0037371511571109295
+Training Epoch 38
+train_metrics: 
+R2: 0.9288548827171326
+MSE: 24475.728515625
+MAPE: 0.15753038227558136
+test metrics:
+R2: 0.9030777215957642
+MSE: 33559.37890625
+MAPE: 0.16375724971294403
+MSE diff_p 38
+----------
+39: 0.0027321449015289545
+Training Epoch 39
+train_metrics: 
+R2: 0.93790203332901
+MSE: 17893.638671875
+MAPE: 0.09486007690429688
+test metrics:
+R2: 0.899155855178833
+MSE: 35141.6328125
+MAPE: 0.185978502035141
+MSE diff_p 39
+----------
+40: 0.002884891116991639
+Training Epoch 40
+train_metrics: 
+R2: 0.9422929883003235
+MSE: 18894.01953125
+MAPE: 0.14414142072200775
+test metrics:
+R2: 0.9112412929534912
+MSE: 31191.80078125
+MAPE: 0.1613679826259613
+MSE diff_p 40
+----------
+41: 0.0024568340741097927
+Training Epoch 41
+train_metrics: 
+R2: 0.9525523781776428
+MSE: 16090.544921875
+MAPE: 0.12135220319032669
+test metrics:
+R2: 0.9095302820205688
+MSE: 32340.009765625
+MAPE: 0.1751246452331543
+MSE diff_p 41
+----------
+42: 0.0030772280879318714
+Training Epoch 42
+train_metrics: 
+R2: 0.9373786449432373
+MSE: 20153.69140625
+MAPE: 0.12006250023841858
+test metrics:
+R2: 0.9185509085655212
+MSE: 29550.693359375
+MAPE: 0.15696009993553162
+MSE diff_p 42
+----------
+43: 0.002169708488509059
+Training Epoch 43
+train_metrics: 
+R2: 0.9527896642684937
+MSE: 14210.07421875
+MAPE: 0.11268076300621033
+test metrics:
+R2: 0.920202910900116
+MSE: 29120.61328125
+MAPE: 0.1583155393600464
+MSE diff_p 43
+----------
+44: 0.0027943404857069254
+Training Epoch 44
+train_metrics: 
+R2: 0.9490867853164673
+MSE: 18300.978515625
+MAPE: 0.1318114846944809
+test metrics:
+R2: 0.9230120182037354
+MSE: 28225.787109375
+MAPE: 0.15415342152118683
+MSE diff_p 44
+----------
+45: 0.0032797534950077534
+Training Epoch 45
+train_metrics: 
+R2: 0.9393889307975769
+MSE: 21480.08984375
+MAPE: 0.13254520297050476
+test metrics:
+R2: 0.921337366104126
+MSE: 29258.046875
+MAPE: 0.16490468382835388
+MSE diff_p 45
+----------
+46: 0.003210392314940691
+Training Epoch 46
+train_metrics: 
+R2: 0.940596878528595
+MSE: 21025.82421875
+MAPE: 0.14357978105545044
+test metrics:
+R2: 0.9216107130050659
+MSE: 28725.560546875
+MAPE: 0.15612925589084625
+MSE diff_p 46
+----------
+47: 0.003034182358533144
+Training Epoch 47
+train_metrics: 
+R2: 0.9374213218688965
+MSE: 19871.7734375
+MAPE: 0.12985125184059143
+test metrics:
+R2: 0.9077709317207336
+MSE: 33634.98828125
+MAPE: 0.19271893799304962
+MSE diff_p 47
+----------
+48: 0.0033999085426330566
+Training Epoch 48
+train_metrics: 
+R2: 0.9314491152763367
+MSE: 22267.0234375
+MAPE: 0.1455012410879135
+test metrics:
+R2: 0.9163438677787781
+MSE: 30396.517578125
+MAPE: 0.165365070104599
+MSE diff_p 48
+----------
+49: 0.004239856265485287
+Training Epoch 49
+train_metrics: 
+R2: 0.9184484481811523
+MSE: 27768.09375
+MAPE: 0.15584123134613037
+test metrics:
+R2: 0.8909740447998047
+MSE: 39444.82421875
+MAPE: 0.21476130187511444
+MSE diff_p 49
+----------
+50: 0.00403872923925519
+Training Epoch 50
+train_metrics: 
+R2: 0.9177916049957275
+MSE: 26450.85546875
+MAPE: 0.1936386227607727
+test metrics:
+R2: 0.9103192687034607
+MSE: 32476.0859375
+MAPE: 0.17747710645198822
+MSE diff_p 50
+----------
+51: 0.003114439779892564
+Training Epoch 51
+train_metrics: 
+R2: 0.9353833198547363
+MSE: 20397.404296875
+MAPE: 0.14158512651920319
+test metrics:
+R2: 0.9068728089332581
+MSE: 33264.40234375
+MAPE: 0.19124183058738708
+MSE diff_p 51
+----------
+52: 0.003460927400738001
+Training Epoch 52
+train_metrics: 
+R2: 0.9350975155830383
+MSE: 22666.65234375
+MAPE: 0.14209040999412537
+test metrics:
+R2: 0.919559121131897
+MSE: 29256.400390625
+MAPE: 0.15605929493904114
+MSE diff_p 52
+----------
+53: 0.0030928964260965586
+Training Epoch 53
+train_metrics: 
+R2: 0.9402263760566711
+MSE: 20256.30859375
+MAPE: 0.11187460273504257
+test metrics:
+R2: 0.9181715846061707
+MSE: 30148.513671875
+MAPE: 0.17833369970321655
+MSE diff_p 53
+----------
+54: 0.0023995316587388515
+Training Epoch 54
+train_metrics: 
+R2: 0.9591494798660278
+MSE: 15715.25390625
+MAPE: 0.1371549665927887
+test metrics:
+R2: 0.9298359155654907
+MSE: 26072.099609375
+MAPE: 0.1526709944009781
+MSE diff_p 54
+----------
+55: 0.002452785149216652
+Training Epoch 55
+train_metrics: 
+R2: 0.9531964063644409
+MSE: 16064.029296875
+MAPE: 0.12556587159633636
+test metrics:
+R2: 0.9236301183700562
+MSE: 28375.2265625
+MAPE: 0.17081084847450256
+MSE diff_p 55
+----------
+56: 0.0024431864731013775
+Training Epoch 56
+train_metrics: 
+R2: 0.9516931772232056
+MSE: 16001.162109375
+MAPE: 0.1179439127445221
+test metrics:
+R2: 0.9325832724571228
+MSE: 25349.982421875
+MAPE: 0.14894098043441772
+MSE diff_p 56
+----------
+57: 0.0025551982689648867
+Training Epoch 57
+train_metrics: 
+R2: 0.9538615345954895
+MSE: 16734.76171875
+MAPE: 0.12530404329299927
+test metrics:
+R2: 0.9299221634864807
+MSE: 26675.142578125
+MAPE: 0.16165421903133392
+MSE diff_p 57
+----------
+58: 0.0027246554382145405
+Training Epoch 58
+train_metrics: 
+R2: 0.9476983547210693
+MSE: 17844.587890625
+MAPE: 0.10619732737541199
+test metrics:
+R2: 0.9365088939666748
+MSE: 24343.103515625
+MAPE: 0.1466420292854309
+MSE diff_p 58
+----------
+59: 0.00216911849565804
+Training Epoch 59
+train_metrics: 
+R2: 0.960091233253479
+MSE: 14206.208984375
+MAPE: 0.10314357280731201
+test metrics:
+R2: 0.9337893128395081
+MSE: 25199.65625
+MAPE: 0.15359795093536377
+MSE diff_p 59
+----------
+60: 0.002167138271033764
+Training Epoch 60
+train_metrics: 
+R2: 0.9563418626785278
+MSE: 14193.240234375
+MAPE: 0.11417242884635925
+test metrics:
+R2: 0.9337763786315918
+MSE: 24964.421875
+MAPE: 0.1509682983160019
+MSE diff_p 60
+----------
+61: 0.0024733860045671463
+Training Epoch 61
+train_metrics: 
+R2: 0.9510239362716675
+MSE: 16198.94921875
+MAPE: 0.11053165793418884
+test metrics:
+R2: 0.9315606355667114
+MSE: 25837.625
+MAPE: 0.15722408890724182
+MSE diff_p 61
+----------
+62: 0.001939388457685709
+Training Epoch 62
+train_metrics: 
+R2: 0.9600152969360352
+MSE: 12701.6396484375
+MAPE: 0.12517662346363068
+test metrics:
+R2: 0.9354882836341858
+MSE: 24420.466796875
+MAPE: 0.1486949473619461
+MSE diff_p 62
+----------
+63: 0.0022565461695194244
+Training Epoch 63
+train_metrics: 
+R2: 0.9565684199333191
+MSE: 14778.80078125
+MAPE: 0.1204955130815506
+test metrics:
+R2: 0.9288956522941589
+MSE: 26739.681640625
+MAPE: 0.16630513966083527
+MSE diff_p 63
+----------
+64: 0.0024715415202081203
+Training Epoch 64
+train_metrics: 
+R2: 0.9549489617347717
+MSE: 16186.8681640625
+MAPE: 0.11371968686580658
+test metrics:
+R2: 0.9368679523468018
+MSE: 24045.416015625
+MAPE: 0.14587628841400146
+MSE diff_p 64
+----------
+65: 0.002792671788483858
+Training Epoch 65
+train_metrics: 
+R2: 0.9417338371276855
+MSE: 18290.046875
+MAPE: 0.11593763530254364
+test metrics:
+R2: 0.9280492067337036
+MSE: 27595.37109375
+MAPE: 0.17334185540676117
+MSE diff_p 65
+----------
+66: 0.0031237707007676363
+Training Epoch 66
+train_metrics: 
+R2: 0.9347152709960938
+MSE: 20458.515625
+MAPE: 0.13140644133090973
+test metrics:
+R2: 0.9314993023872375
+MSE: 25937.919921875
+MAPE: 0.15449796617031097
+MSE diff_p 66
+----------
+67: 0.0031616089399904013
+Training Epoch 67
+train_metrics: 
+R2: 0.9447168707847595
+MSE: 20706.328125
+MAPE: 0.14030517637729645
+test metrics:
+R2: 0.9136970639228821
+MSE: 32570.55078125
+MAPE: 0.1971200406551361
+MSE diff_p 67
+----------
+68: 0.0030843550339341164
+Training Epoch 68
+train_metrics: 
+R2: 0.9369865655899048
+MSE: 20200.37109375
+MAPE: 0.1678054928779602
+test metrics:
+R2: 0.9286137819290161
+MSE: 27078.662109375
+MAPE: 0.16227436065673828
+MSE diff_p 68
+----------
+69: 0.0032618248369544744
+Training Epoch 69
+train_metrics: 
+R2: 0.934482991695404
+MSE: 21362.671875
+MAPE: 0.120875783264637
+test metrics:
+R2: 0.9172452688217163
+MSE: 31416.1796875
+MAPE: 0.19221267104148865
+MSE diff_p 69
+----------
+70: 0.003306180704385042
+Training Epoch 70
+train_metrics: 
+R2: 0.9336603879928589
+MSE: 21653.169921875
+MAPE: 0.15415702760219574
+test metrics:
+R2: 0.937138020992279
+MSE: 24282.41796875
+MAPE: 0.1541139930486679
+MSE diff_p 70
+----------
+71: 0.002922223648056388
+Training Epoch 71
+train_metrics: 
+R2: 0.9452239274978638
+MSE: 19138.51953125
+MAPE: 0.1263922154903412
+test metrics:
+R2: 0.9120146632194519
+MSE: 33047.55859375
+MAPE: 0.1999356895685196
+MSE diff_p 71
+----------
+72: 0.002945976797491312
+Training Epoch 72
+train_metrics: 
+R2: 0.9354287385940552
+MSE: 19294.0859375
+MAPE: 0.14903923869132996
+test metrics:
+R2: 0.9323019981384277
+MSE: 25535.203125
+MAPE: 0.15339526534080505
+MSE diff_p 72
+----------
+73: 0.00260254112072289
+Training Epoch 73
+train_metrics: 
+R2: 0.9525597095489502
+MSE: 17044.82421875
+MAPE: 0.12906783819198608
+test metrics:
+R2: 0.9267811179161072
+MSE: 27625.90234375
+MAPE: 0.17589907348155975
+MSE diff_p 73
+----------
+74: 0.002403737511485815
+Training Epoch 74
+train_metrics: 
+R2: 0.9568134546279907
+MSE: 15742.80078125
+MAPE: 0.12457779049873352
+test metrics:
+R2: 0.9406012296676636
+MSE: 22902.94921875
+MAPE: 0.14375704526901245
+MSE diff_p 74
+----------
+75: 0.0020921388640999794
+Training Epoch 75
+train_metrics: 
+R2: 0.9553583264350891
+MSE: 13702.046875
+MAPE: 0.1127529889345169
+test metrics:
+R2: 0.9368102550506592
+MSE: 24350.26171875
+MAPE: 0.15799954533576965
+MSE diff_p 75
+----------
+76: 0.0020665768533945084
+Training Epoch 76
+train_metrics: 
+R2: 0.956662118434906
+MSE: 13534.6337890625
+MAPE: 0.11262825131416321
+test metrics:
+R2: 0.9423868656158447
+MSE: 22322.294921875
+MAPE: 0.1429496705532074
+MSE diff_p 76
+----------
+77: 0.002162049524486065
+Training Epoch 77
+train_metrics: 
+R2: 0.9555415511131287
+MSE: 14159.9130859375
+MAPE: 0.10719835758209229
+test metrics:
+R2: 0.9365129470825195
+MSE: 24578.822265625
+MAPE: 0.16069628298282623
+MSE diff_p 77
+----------
+78: 0.002402345184236765
+Training Epoch 78
+train_metrics: 
+R2: 0.9568876028060913
+MSE: 15733.6806640625
+MAPE: 0.1292751431465149
+test metrics:
+R2: 0.9422878623008728
+MSE: 22318.017578125
+MAPE: 0.14306077361106873
+MSE diff_p 78
+----------
+79: 0.002945207990705967
+Training Epoch 79
+train_metrics: 
+R2: 0.9451151490211487
+MSE: 19289.0546875
+MAPE: 0.13832470774650574
+test metrics:
+R2: 0.9401155114173889
+MSE: 23506.390625
+MAPE: 0.15430134534835815
+MSE diff_p 79
+----------
+80: 0.001932285726070404
+Training Epoch 80
+train_metrics: 
+R2: 0.9643759727478027
+MSE: 12655.119140625
+MAPE: 0.11848689615726471
+test metrics:
+R2: 0.9481717348098755
+MSE: 20740.51171875
+MAPE: 0.13780802488327026
+MSE diff_p 80
+----------
+81: 0.0019107877742499113
+Training Epoch 81
+train_metrics: 
+R2: 0.9657871723175049
+MSE: 12514.32421875
+MAPE: 0.10582565516233444
+test metrics:
+R2: 0.9436438083648682
+MSE: 22582.91015625
+MAPE: 0.1495460718870163
+MSE diff_p 81
+----------
+82: 0.0016306245233863592
+Training Epoch 82
+train_metrics: 
+R2: 0.9709956645965576
+MSE: 10679.44921875
+MAPE: 0.10123171657323837
+test metrics:
+R2: 0.9494423866271973
+MSE: 20473.4765625
+MAPE: 0.13730157911777496
+MSE diff_p 82
+----------
+83: 0.002235821448266506
+Training Epoch 83
+train_metrics: 
+R2: 0.9589568376541138
+MSE: 14643.068359375
+MAPE: 0.1254957765340805
+test metrics:
+R2: 0.9457706809043884
+MSE: 22016.080078125
+MAPE: 0.14747077226638794
+MSE diff_p 83
+----------
+84: 0.001785431755706668
+Training Epoch 84
+train_metrics: 
+R2: 0.9663621187210083
+MSE: 11693.328125
+MAPE: 0.11363120377063751
+test metrics:
+R2: 0.9507675766944885
+MSE: 19980.40234375
+MAPE: 0.13533738255500793
+MSE diff_p 84
+----------
+85: 0.0025416817516088486
+Training Epoch 85
+train_metrics: 
+R2: 0.9531425833702087
+MSE: 16646.23828125
+MAPE: 0.1143227368593216
+test metrics:
+R2: 0.9445316791534424
+MSE: 22314.267578125
+MAPE: 0.15093353390693665
+MSE diff_p 85
+----------
+86: 0.0017251475946977735
+Training Epoch 86
+train_metrics: 
+R2: 0.9666166305541992
+MSE: 11298.51171875
+MAPE: 0.11072152107954025
+test metrics:
+R2: 0.9514179825782776
+MSE: 19838.3203125
+MAPE: 0.1379876583814621
+MSE diff_p 86
+----------
+87: 0.002689430257305503
+Training Epoch 87
+train_metrics: 
+R2: 0.952183187007904
+MSE: 17613.884765625
+MAPE: 0.12215518951416016
+test metrics:
+R2: 0.9354703426361084
+MSE: 25773.6015625
+MAPE: 0.1734110563993454
+MSE diff_p 87
+----------
+88: 0.0024364921264350414
+Training Epoch 88
+train_metrics: 
+R2: 0.9479157328605652
+MSE: 15957.31640625
+MAPE: 0.14169466495513916
+test metrics:
+R2: 0.946046769618988
+MSE: 21618.82421875
+MAPE: 0.14646191895008087
+MSE diff_p 88
+----------
+89: 0.00266202911734581
+Training Epoch 89
+train_metrics: 
+R2: 0.9501199126243591
+MSE: 17434.4296875
+MAPE: 0.13021552562713623
+test metrics:
+R2: 0.922986626625061
+MSE: 29727.689453125
+MAPE: 0.19224940240383148
+MSE diff_p 89
+----------
+90: 0.002517026150599122
+Training Epoch 90
+train_metrics: 
+R2: 0.9510844945907593
+MSE: 16484.76171875
+MAPE: 0.1472681313753128
+test metrics:
+R2: 0.9400854110717773
+MSE: 23636.376953125
+MAPE: 0.15556742250919342
+MSE diff_p 90
+----------
+91: 0.002591007389128208
+Training Epoch 91
+train_metrics: 
+R2: 0.9448587894439697
+MSE: 16969.2890625
+MAPE: 0.12152104824781418
+test metrics:
+R2: 0.932841420173645
+MSE: 26526.634765625
+MAPE: 0.17651528120040894
+MSE diff_p 91
+----------
+92: 0.0024215662851929665
+Training Epoch 92
+train_metrics: 
+R2: 0.9556150436401367
+MSE: 15859.5634765625
+MAPE: 0.13519588112831116
+test metrics:
+R2: 0.9505220055580139
+MSE: 20133.0859375
+MAPE: 0.13986836373806
+MSE diff_p 92
+----------
+93: 0.002033864613622427
+Training Epoch 93
+train_metrics: 
+R2: 0.9626421332359314
+MSE: 13320.392578125
+MAPE: 0.10511476546525955
+test metrics:
+R2: 0.9438016414642334
+MSE: 22681.525390625
+MAPE: 0.1557442545890808
+MSE diff_p 93
+----------
+94: 0.0020066348370164633
+Training Epoch 94
+train_metrics: 
+R2: 0.963869571685791
+MSE: 13142.056640625
+MAPE: 0.11048787832260132
+test metrics:
+R2: 0.951562225818634
+MSE: 19631.26953125
+MAPE: 0.135268896818161
+MSE diff_p 94
+----------
+95: 0.002226157346740365
+Training Epoch 95
+train_metrics: 
+R2: 0.9572773575782776
+MSE: 14579.7734375
+MAPE: 0.11686598509550095
+test metrics:
+R2: 0.94745934009552
+MSE: 21333.955078125
+MAPE: 0.14783251285552979
+MSE diff_p 95
+----------
+96: 0.0023173850495368242
+Training Epoch 96
+train_metrics: 
+R2: 0.9579116106033325
+MSE: 15177.25390625
+MAPE: 0.11444834619760513
+test metrics:
+R2: 0.9507266283035278
+MSE: 19755.5234375
+MAPE: 0.13610562682151794
+MSE diff_p 96
+----------
+97: 0.002239405643194914
+Training Epoch 97
+train_metrics: 
+R2: 0.957546055316925
+MSE: 14666.541015625
+MAPE: 0.10353893041610718
+test metrics:
+R2: 0.9490987658500671
+MSE: 20663.5625
+MAPE: 0.14423461258411407
+MSE diff_p 97
+----------
+98: 0.001973241800442338
+Training Epoch 98
+train_metrics: 
+R2: 0.9643864631652832
+MSE: 12923.353515625
+MAPE: 0.1038699597120285
+test metrics:
+R2: 0.9519031047821045
+MSE: 19438.58984375
+MAPE: 0.13573551177978516
+MSE diff_p 98
+----------
+99: 0.0018794086063280702
+Training Epoch 99
+train_metrics: 
+R2: 0.9647452235221863
+MSE: 12308.8134765625
+MAPE: 0.12192045152187347
+test metrics:
+R2: 0.9503123760223389
+MSE: 20233.1953125
+MAPE: 0.1431245356798172
+MSE diff_p 99
+----------
+100: 0.0018292191671207547
+Training Epoch 100
+train_metrics: 
+R2: 0.9654907584190369
+MSE: 11980.10546875
+MAPE: 0.10287115722894669
+test metrics:
+R2: 0.9529738426208496
+MSE: 19066.708984375
+MAPE: 0.13394783437252045
+MSE diff_p 100
+----------
+101: 0.002071161288768053
+Training Epoch 101
+train_metrics: 
+R2: 0.9622248411178589
+MSE: 13564.65625
+MAPE: 0.10478170961141586
+test metrics:
+R2: 0.9497352838516235
+MSE: 20433.634765625
+MAPE: 0.14401096105575562
+MSE diff_p 101
+----------
+102: 0.0025860376190394163
+Training Epoch 102
+train_metrics: 
+R2: 0.954293429851532
+MSE: 16936.734375
+MAPE: 0.1415424346923828
+test metrics:
+R2: 0.9542081356048584
+MSE: 18767.556640625
+MAPE: 0.13362887501716614
+MSE diff_p 102
+----------
+103: 0.003174577374011278
+Training Epoch 103
+train_metrics: 
+R2: 0.9384716153144836
+MSE: 20791.2578125
+MAPE: 0.12292696535587311
+test metrics:
+R2: 0.9347402453422546
+MSE: 26341.43359375
+MAPE: 0.1789601594209671
+MSE diff_p 103
+----------
+104: 0.002587215043604374
+Training Epoch 104
+train_metrics: 
+R2: 0.9490037560462952
+MSE: 16944.44921875
+MAPE: 0.13634739816188812
+test metrics:
+R2: 0.9482349157333374
+MSE: 20934.396484375
+MAPE: 0.1445891112089157
+MSE diff_p 104
+----------
+105: 0.0032474342733621597
+Training Epoch 105
+train_metrics: 
+R2: 0.933427631855011
+MSE: 21268.423828125
+MAPE: 0.1259613335132599
+test metrics:
+R2: 0.9193586111068726
+MSE: 31810.787109375
+MAPE: 0.20084132254123688
+MSE diff_p 105
+----------
+106: 0.00337282195687294
+Training Epoch 106
+train_metrics: 
+R2: 0.9358739852905273
+MSE: 22089.625
+MAPE: 0.16822557151317596
+test metrics:
+R2: 0.94273841381073
+MSE: 22977.060546875
+MAPE: 0.15965090692043304
+MSE diff_p 106
+----------
+107: 0.0029800543561577797
+Training Epoch 107
+train_metrics: 
+R2: 0.9428989291191101
+MSE: 19517.26953125
+MAPE: 0.1348668485879898
+test metrics:
+R2: 0.9278463125228882
+MSE: 28558.505859375
+MAPE: 0.18919728696346283
+MSE diff_p 107
+----------
+108: 0.0030061027500778437
+Training Epoch 108
+train_metrics: 
+R2: 0.9514977931976318
+MSE: 19687.87109375
+MAPE: 0.16096389293670654
+test metrics:
+R2: 0.9511507153511047
+MSE: 20099.2890625
+MAPE: 0.14704760909080505
+MSE diff_p 108
+----------
+109: 0.0021561752073466778
+Training Epoch 109
+train_metrics: 
+R2: 0.958497166633606
+MSE: 14121.439453125
+MAPE: 0.1151905357837677
+test metrics:
+R2: 0.942310094833374
+MSE: 23288.529296875
+MAPE: 0.16529960930347443
+MSE diff_p 109
+----------
+110: 0.0017322725616395473
+Training Epoch 110
+train_metrics: 
+R2: 0.9662773013114929
+MSE: 11345.17578125
+MAPE: 0.1026293933391571
+test metrics:
+R2: 0.9568129777908325
+MSE: 17921.66796875
+MAPE: 0.13226883113384247
+MSE diff_p 110
+----------
+111: 0.0019151432206854224
+Training Epoch 111
+train_metrics: 
+R2: 0.9657320976257324
+MSE: 12542.84765625
+MAPE: 0.11151954531669617
+test metrics:
+R2: 0.954909086227417
+MSE: 18588.380859375
+MAPE: 0.13530467450618744
+MSE diff_p 111
+----------
+112: 0.0023681537713855505
+Training Epoch 112
+train_metrics: 
+R2: 0.95682293176651
+MSE: 15509.751953125
+MAPE: 0.11453813314437866
+test metrics:
+R2: 0.955520749092102
+MSE: 18338.4140625
+MAPE: 0.13492511212825775
+MSE diff_p 112
+----------
+113: 0.002348260022699833
+Training Epoch 113
+train_metrics: 
+R2: 0.9528908729553223
+MSE: 15379.4619140625
+MAPE: 0.09783358871936798
+test metrics:
+R2: 0.9565303921699524
+MSE: 18180.3046875
+MAPE: 0.13488569855690002
+MSE diff_p 113
+----------
+114: 0.0018541989848017693
+Training Epoch 114
+train_metrics: 
+R2: 0.9651464819908142
+MSE: 12143.70703125
+MAPE: 0.11807364225387573
+test metrics:
+R2: 0.9603465795516968
+MSE: 16812.619140625
+MAPE: 0.13036789000034332
+MSE diff_p 114
+----------
+115: 0.0018108607036992908
+Training Epoch 115
+train_metrics: 
+R2: 0.9666096568107605
+MSE: 11859.8720703125
+MAPE: 0.10213548690080643
+test metrics:
+R2: 0.9559870958328247
+MSE: 18529.029296875
+MAPE: 0.13767743110656738
+MSE diff_p 115
+----------
+116: 0.0017672829562798142
+Training Epoch 116
+train_metrics: 
+R2: 0.9669382572174072
+MSE: 11574.4697265625
+MAPE: 0.10739676654338837
+test metrics:
+R2: 0.9576063752174377
+MSE: 17531.8125
+MAPE: 0.13024504482746124
+MSE diff_p 116
+----------
+117: 0.0018713042372837663
+Training Epoch 117
+train_metrics: 
+R2: 0.9684512615203857
+MSE: 12255.736328125
+MAPE: 0.11473660171031952
+test metrics:
+R2: 0.9564333558082581
+MSE: 18115.994140625
+MAPE: 0.13485318422317505
+MSE diff_p 117
+----------
+118: 0.0020247017964720726
+Training Epoch 118
+train_metrics: 
+R2: 0.9632628560066223
+MSE: 13260.380859375
+MAPE: 0.10206402838230133
+test metrics:
+R2: 0.9589115381240845
+MSE: 17212.71484375
+MAPE: 0.12942174077033997
+MSE diff_p 118
+----------
+119: 0.0016845071222633123
+Training Epoch 119
+train_metrics: 
+R2: 0.9702610969543457
+MSE: 11032.3447265625
+MAPE: 0.11524869501590729
+test metrics:
+R2: 0.9578936696052551
+MSE: 17549.35546875
+MAPE: 0.13188405334949493
+MSE diff_p 119
+----------
+120: 0.00195923144929111
+Training Epoch 120
+train_metrics: 
+R2: 0.9655507802963257
+MSE: 12831.5947265625
+MAPE: 0.11378854513168335
+test metrics:
+R2: 0.9589205980300903
+MSE: 17365.5
+MAPE: 0.1295844316482544
+MSE diff_p 120
+----------
+121: 0.0021288448479026556
+Training Epoch 121
+train_metrics: 
+R2: 0.9630775451660156
+MSE: 13942.4462890625
+MAPE: 0.11351172626018524
+test metrics:
+R2: 0.9598270058631897
+MSE: 16962.7109375
+MAPE: 0.12705641984939575
+MSE diff_p 121
+----------
+122: 0.0017815798055380583
+Training Epoch 122
+train_metrics: 
+R2: 0.9694604873657227
+MSE: 11668.1044921875
+MAPE: 0.10620962083339691
+test metrics:
+R2: 0.9573560357093811
+MSE: 17865.77734375
+MAPE: 0.1323634833097458
+MSE diff_p 122
+----------
+123: 0.0017536496743559837
+Training Epoch 123
+train_metrics: 
+R2: 0.969229519367218
+MSE: 11485.1806640625
+MAPE: 0.1042378842830658
+test metrics:
+R2: 0.9584145545959473
+MSE: 17466.671875
+MAPE: 0.12978902459144592
+MSE diff_p 123
+----------
+124: 0.0018711877055466175
+Training Epoch 124
+train_metrics: 
+R2: 0.9664551019668579
+MSE: 12254.970703125
+MAPE: 0.10266100615262985
+test metrics:
+R2: 0.9559121131896973
+MSE: 18620.974609375
+MAPE: 0.13857008516788483
+MSE diff_p 124
+----------
+125: 0.0017689428059384227
+Training Epoch 125
+train_metrics: 
+R2: 0.969196617603302
+MSE: 11585.3359375
+MAPE: 0.10710570216178894
+test metrics:
+R2: 0.9609225392341614
+MSE: 16704.56640625
+MAPE: 0.12702223658561707
+MSE diff_p 125
+----------
+126: 0.0016713746590539813
+Training Epoch 126
+train_metrics: 
+R2: 0.9715986251831055
+MSE: 10946.3359375
+MAPE: 0.10403677821159363
+test metrics:
+R2: 0.9569873213768005
+MSE: 18110.798828125
+MAPE: 0.13570469617843628
+MSE diff_p 126
+----------
+127: 0.0024655601009726524
+Training Epoch 127
+train_metrics: 
+R2: 0.9536737203598022
+MSE: 16147.6953125
+MAPE: 0.11600271612405777
+test metrics:
+R2: 0.9612006545066833
+MSE: 16454.765625
+MAPE: 0.12545281648635864
+MSE diff_p 127
+----------
+128: 0.0018590951804071665
+Training Epoch 128
+train_metrics: 
+R2: 0.9692409038543701
+MSE: 12175.7734375
+MAPE: 0.11237333714962006
+test metrics:
+R2: 0.9579512476921082
+MSE: 17813.703125
+MAPE: 0.13485850393772125
+MSE diff_p 128
+----------
+129: 0.0016426194924861193
+Training Epoch 129
+train_metrics: 
+R2: 0.96857750415802
+MSE: 10758.009765625
+MAPE: 0.10675591230392456
+test metrics:
+R2: 0.9629278779029846
+MSE: 15976.2998046875
+MAPE: 0.12454593926668167
+MSE diff_p 129
+----------
+130: 0.001889762468636036
+Training Epoch 130
+train_metrics: 
+R2: 0.9661605954170227
+MSE: 12376.6220703125
+MAPE: 0.10402107238769531
+test metrics:
+R2: 0.9555233716964722
+MSE: 18998.05078125
+MAPE: 0.14165937900543213
+MSE diff_p 130
+----------
+131: 0.002339280443266034
+Training Epoch 131
+train_metrics: 
+R2: 0.9591716527938843
+MSE: 15320.6494140625
+MAPE: 0.12157779932022095
+test metrics:
+R2: 0.9624484777450562
+MSE: 16221.6953125
+MAPE: 0.13021983206272125
+MSE diff_p 131
+----------
+132: 0.0026239959988743067
+Training Epoch 132
+train_metrics: 
+R2: 0.9554983377456665
+MSE: 17185.3359375
+MAPE: 0.12313251197338104
+test metrics:
+R2: 0.9480584263801575
+MSE: 21985.650390625
+MAPE: 0.16183359920978546
+MSE diff_p 132
+----------
+133: 0.0021877549588680267
+Training Epoch 133
+train_metrics: 
+R2: 0.9579275846481323
+MSE: 14328.2666015625
+MAPE: 0.1504966914653778
+test metrics:
+R2: 0.9586278200149536
+MSE: 17655.83203125
+MAPE: 0.14124701917171478
+MSE diff_p 133
+----------
+134: 0.002380961552262306
+Training Epoch 134
+train_metrics: 
+R2: 0.9498583078384399
+MSE: 15593.6337890625
+MAPE: 0.11568834632635117
+test metrics:
+R2: 0.9371670484542847
+MSE: 26127.083984375
+MAPE: 0.18185895681381226
+MSE diff_p 134
+----------
+135: 0.0025379990693181753
+Training Epoch 135
+train_metrics: 
+R2: 0.9539814591407776
+MSE: 16622.1171875
+MAPE: 0.15422967076301575
+test metrics:
+R2: 0.9553646445274353
+MSE: 18963.017578125
+MAPE: 0.15235012769699097
+MSE diff_p 135
+----------
+136: 0.0025691052433103323
+Training Epoch 136
+train_metrics: 
+R2: 0.9481592774391174
+MSE: 16825.84375
+MAPE: 0.1110120564699173
+test metrics:
+R2: 0.9440001249313354
+MSE: 23599.9921875
+MAPE: 0.16932927072048187
+MSE diff_p 136
+----------
+137: 0.0024796822108328342
+Training Epoch 137
+train_metrics: 
+R2: 0.948621392250061
+MSE: 16240.1865234375
+MAPE: 0.13320784270763397
+test metrics:
+R2: 0.9596512317657471
+MSE: 17284.18359375
+MAPE: 0.13885921239852905
+MSE diff_p 137
+----------
+138: 0.0023081337567418814
+Training Epoch 138
+train_metrics: 
+R2: 0.9589906334877014
+MSE: 15116.6640625
+MAPE: 0.1222865879535675
+test metrics:
+R2: 0.9460276365280151
+MSE: 22397.916015625
+MAPE: 0.16410930454730988
+MSE diff_p 138
+----------
+139: 0.002191628562286496
+Training Epoch 139
+train_metrics: 
+R2: 0.9628608226776123
+MSE: 14353.6357421875
+MAPE: 0.1267300248146057
+test metrics:
+R2: 0.962785542011261
+MSE: 16052.998046875
+MAPE: 0.1282990574836731
+MSE diff_p 139
+----------
+140: 0.0018364255083724856
+Training Epoch 140
+train_metrics: 
+R2: 0.9662586450576782
+MSE: 12027.302734375
+MAPE: 0.09616653621196747
+test metrics:
+R2: 0.9534843564033508
+MSE: 19981.51171875
+MAPE: 0.1492839753627777
+MSE diff_p 140
+----------
+141: 0.001754139899276197
+Training Epoch 141
+train_metrics: 
+R2: 0.9692798256874084
+MSE: 11488.38671875
+MAPE: 0.1090354323387146
+test metrics:
+R2: 0.9640217423439026
+MSE: 15624.0419921875
+MAPE: 0.12707552313804626
+MSE diff_p 141
+----------
+142: 0.0015946525381878018
+Training Epoch 142
+train_metrics: 
+R2: 0.9714407324790955
+MSE: 10443.8583984375
+MAPE: 0.09898620843887329
+test metrics:
+R2: 0.959769606590271
+MSE: 17491.908203125
+MAPE: 0.13414578139781952
+MSE diff_p 142
+----------
+143: 0.001985953189432621
+Training Epoch 143
+train_metrics: 
+R2: 0.9669613242149353
+MSE: 13006.60546875
+MAPE: 0.1119496300816536
+test metrics:
+R2: 0.9649963974952698
+MSE: 15280.921875
+MAPE: 0.12476085871458054
+MSE diff_p 143
+----------
+144: 0.002156942617148161
+Training Epoch 144
+train_metrics: 
+R2: 0.9611238241195679
+MSE: 14126.4638671875
+MAPE: 0.12783187627792358
+test metrics:
+R2: 0.9532489776611328
+MSE: 19981.94921875
+MAPE: 0.15095338225364685
+MSE diff_p 144
+----------
+145: 0.0020138323307037354
+Training Epoch 145
+train_metrics: 
+R2: 0.9629299640655518
+MSE: 13189.193359375
+MAPE: 0.1266559660434723
+test metrics:
+R2: 0.9622671008110046
+MSE: 16346.8154296875
+MAPE: 0.13473919034004211
+MSE diff_p 145
+----------
+146: 0.0026737211737781763
+Training Epoch 146
+train_metrics: 
+R2: 0.953597903251648
+MSE: 17511.00390625
+MAPE: 0.11393141746520996
+test metrics:
+R2: 0.9465450048446655
+MSE: 22967.880859375
+MAPE: 0.16520972549915314
+MSE diff_p 146
+----------
+147: 0.0023389568086713552
+Training Epoch 147
+train_metrics: 
+R2: 0.9584619402885437
+MSE: 15318.53125
+MAPE: 0.14262953400611877
+test metrics:
+R2: 0.9616873264312744
+MSE: 16550.5078125
+MAPE: 0.13869811594486237
+MSE diff_p 147
+----------
+148: 0.002254219027236104
+Training Epoch 148
+train_metrics: 
+R2: 0.9565120935440063
+MSE: 14763.5595703125
+MAPE: 0.10858792066574097
+test metrics:
+R2: 0.9491726160049438
+MSE: 21641.005859375
+MAPE: 0.1612330824136734
+MSE diff_p 148
+----------
+149: 0.001962878042832017
+Training Epoch 149
+train_metrics: 
+R2: 0.9631169438362122
+MSE: 12855.478515625
+MAPE: 0.11714281141757965
+test metrics:
+R2: 0.9631982445716858
+MSE: 15897.7080078125
+MAPE: 0.13268302381038666
+MSE diff_p 149
+----------
+150: 0.0019590125884860754
+Training Epoch 150
+train_metrics: 
+R2: 0.9662550687789917
+MSE: 12830.1630859375
+MAPE: 0.10782095789909363
+test metrics:
+R2: 0.9593214988708496
+MSE: 17544.240234375
+MAPE: 0.1372765451669693
+MSE diff_p 150
+----------
+151: 0.001616177731193602
+Training Epoch 151
+train_metrics: 
+R2: 0.9693936705589294
+MSE: 10584.833984375
+MAPE: 0.09994634985923767
+test metrics:
+R2: 0.9655733108520508
+MSE: 14948.0986328125
+MAPE: 0.12361247837543488
+MSE diff_p 151
+----------
+152: 0.0019207895966246724
+Training Epoch 152
+train_metrics: 
+R2: 0.9631526470184326
+MSE: 12579.8291015625
+MAPE: 0.09827712923288345
+test metrics:
+R2: 0.9607164859771729
+MSE: 16878.39453125
+MAPE: 0.1339751034975052
+MSE diff_p 152
+----------
+153: 0.0015716366469860077
+Training Epoch 153
+train_metrics: 
+R2: 0.970471978187561
+MSE: 10293.12109375
+MAPE: 0.11343857645988464
+test metrics:
+R2: 0.9653736352920532
+MSE: 15008.0
+MAPE: 0.1220957562327385
+MSE diff_p 153
+----------
+154: 0.0015619669575244188
+Training Epoch 154
+train_metrics: 
+R2: 0.9728531837463379
+MSE: 10229.7900390625
+MAPE: 0.09696382284164429
+test metrics:
+R2: 0.9646906852722168
+MSE: 15470.7666015625
+MAPE: 0.12538912892341614
+MSE diff_p 154
+----------
+155: 0.0016428614035248756
+Training Epoch 155
+train_metrics: 
+R2: 0.970496416091919
+MSE: 10759.59375
+MAPE: 0.10306486487388611
+test metrics:
+R2: 0.9635992050170898
+MSE: 15978.4267578125
+MAPE: 0.1269804686307907
+MSE diff_p 155
+----------
+156: 0.0013039980549365282
+Training Epoch 156
+train_metrics: 
+R2: 0.9775041937828064
+MSE: 8540.2763671875
+MAPE: 0.10006885230541229
+test metrics:
+R2: 0.9671165943145752
+MSE: 14589.625
+MAPE: 0.12132736295461655
+MSE diff_p 156
+----------
+157: 0.0015193819999694824
+Training Epoch 157
+train_metrics: 
+R2: 0.9748951196670532
+MSE: 9950.890625
+MAPE: 0.09126083552837372
+test metrics:
+R2: 0.9612913131713867
+MSE: 17113.38671875
+MAPE: 0.13314561545848846
+MSE diff_p 157
+----------
+158: 0.002033703960478306
+Training Epoch 158
+train_metrics: 
+R2: 0.9612002372741699
+MSE: 13319.33984375
+MAPE: 0.10538628697395325
+test metrics:
+R2: 0.9674715399742126
+MSE: 14415.908203125
+MAPE: 0.12073610723018646
+MSE diff_p 158
+----------
+159: 0.002213349100202322
+Training Epoch 159
+train_metrics: 
+R2: 0.9609585404396057
+MSE: 14495.890625
+MAPE: 0.11423057317733765
+test metrics:
+R2: 0.963334321975708
+MSE: 16085.853515625
+MAPE: 0.12737827003002167
+MSE diff_p 159
+----------
+160: 0.0016227508895099163
+Training Epoch 160
+train_metrics: 
+R2: 0.9720072150230408
+MSE: 10627.8828125
+MAPE: 0.11291974782943726
+test metrics:
+R2: 0.9659790992736816
+MSE: 14930.896484375
+MAPE: 0.12079053372144699
+MSE diff_p 160
+----------
+161: 0.0016044463263824582
+Training Epoch 161
+train_metrics: 
+R2: 0.9678910374641418
+MSE: 10508.001953125
+MAPE: 0.09785597026348114
+test metrics:
+R2: 0.9655630588531494
+MSE: 15273.39453125
+MAPE: 0.12240399420261383
+MSE diff_p 161
+----------
+162: 0.001439905958250165
+Training Epoch 162
+train_metrics: 
+R2: 0.9752159118652344
+MSE: 9430.37890625
+MAPE: 0.11293850839138031
+test metrics:
+R2: 0.9667996764183044
+MSE: 14765.45703125
+MAPE: 0.12077724188566208
+MSE diff_p 162
+----------
+163: 0.0022639071103185415
+Training Epoch 163
+train_metrics: 
+R2: 0.9596741795539856
+MSE: 14827.0078125
+MAPE: 0.12248614430427551
+test metrics:
+R2: 0.9668112993240356
+MSE: 14619.9404296875
+MAPE: 0.11922149360179901
+MSE diff_p 163
+----------
+164: 0.0016738292761147022
+Training Epoch 164
+train_metrics: 
+R2: 0.9684582352638245
+MSE: 10962.4111328125
+MAPE: 0.09344504773616791
+test metrics:
+R2: 0.9647025465965271
+MSE: 15510.8330078125
+MAPE: 0.12464591860771179
+MSE diff_p 164
+----------
+165: 0.0016741391737014055
+Training Epoch 165
+train_metrics: 
+R2: 0.9712555408477783
+MSE: 10964.4404296875
+MAPE: 0.107429638504982
+test metrics:
+R2: 0.9677633047103882
+MSE: 14247.5966796875
+MAPE: 0.12011177092790604
+MSE diff_p 165
+----------
+166: 0.002036129357293248
+Training Epoch 166
+train_metrics: 
+R2: 0.9643607139587402
+MSE: 13335.2236328125
+MAPE: 0.13212457299232483
+test metrics:
+R2: 0.9595110416412354
+MSE: 17724.619140625
+MAPE: 0.1373959630727768
+MSE diff_p 166
+----------
+167: 0.0019452078267931938
+Training Epoch 167
+train_metrics: 
+R2: 0.9634336829185486
+MSE: 12739.7509765625
+MAPE: 0.13548719882965088
+test metrics:
+R2: 0.9683624505996704
+MSE: 14275.2333984375
+MAPE: 0.12538845837116241
+MSE diff_p 167
+----------
+168: 0.0016112534794956446
+Training Epoch 168
+train_metrics: 
+R2: 0.9691875576972961
+MSE: 10552.58203125
+MAPE: 0.1092008650302887
+test metrics:
+R2: 0.9534516334533691
+MSE: 20160.595703125
+MAPE: 0.1534700244665146
+MSE diff_p 168
+----------
+169: 0.0025064509827643633
+Training Epoch 169
+train_metrics: 
+R2: 0.9569268822669983
+MSE: 16415.50390625
+MAPE: 0.13156846165657043
+test metrics:
+R2: 0.9626680016517639
+MSE: 16207.9521484375
+MAPE: 0.13262437283992767
+MSE diff_p 169
+----------
+170: 0.0020568137988448143
+Training Epoch 170
+train_metrics: 
+R2: 0.9607892036437988
+MSE: 13470.6923828125
+MAPE: 0.11286257207393646
+test metrics:
+R2: 0.9424541592597961
+MSE: 25018.119140625
+MAPE: 0.17485138773918152
+MSE diff_p 170
+----------
+171: 0.002346874214708805
+Training Epoch 171
+train_metrics: 
+R2: 0.9572562575340271
+MSE: 15370.38671875
+MAPE: 0.14259587228298187
+test metrics:
+R2: 0.963470458984375
+MSE: 16109.51171875
+MAPE: 0.13985534012317657
+MSE diff_p 171
+----------
+172: 0.0023530626203864813
+Training Epoch 172
+train_metrics: 
+R2: 0.9621328115463257
+MSE: 15410.91796875
+MAPE: 0.1233021691441536
+test metrics:
+R2: 0.9462647438049316
+MSE: 23216.943359375
+MAPE: 0.1695784628391266
+MSE diff_p 172
+----------
+173: 0.002394339069724083
+Training Epoch 173
+train_metrics: 
+R2: 0.9595821499824524
+MSE: 15681.24609375
+MAPE: 0.14691048860549927
+test metrics:
+R2: 0.9652078747749329
+MSE: 15253.263671875
+MAPE: 0.13018372654914856
+MSE diff_p 173
+----------
+174: 0.0019974547903984785
+Training Epoch 174
+train_metrics: 
+R2: 0.9582333564758301
+MSE: 13081.93359375
+MAPE: 0.1145956814289093
+test metrics:
+R2: 0.9515553116798401
+MSE: 21036.3125
+MAPE: 0.1578354686498642
+MSE diff_p 174
+----------
+175: 0.0021418272517621517
+Training Epoch 175
+train_metrics: 
+R2: 0.9616637229919434
+MSE: 14027.470703125
+MAPE: 0.13483989238739014
+test metrics:
+R2: 0.9664618372917175
+MSE: 14925.9833984375
+MAPE: 0.13138888776302338
+MSE diff_p 175
+----------
+176: 0.001998292747884989
+Training Epoch 176
+train_metrics: 
+R2: 0.9655768275260925
+MSE: 13087.419921875
+MAPE: 0.11085359752178192
+test metrics:
+R2: 0.9568886756896973
+MSE: 18583.50390625
+MAPE: 0.145469531416893
+MSE diff_p 176
+----------
+177: 0.0016843967605382204
+Training Epoch 177
+train_metrics: 
+R2: 0.9693524241447449
+MSE: 11031.619140625
+MAPE: 0.09951688349246979
+test metrics:
+R2: 0.9672468304634094
+MSE: 14413.6435546875
+MAPE: 0.11925646662712097
+MSE diff_p 177
+----------
+178: 0.0015460128197446465
+Training Epoch 178
+train_metrics: 
+R2: 0.9697620868682861
+MSE: 10125.3017578125
+MAPE: 0.0917278528213501
+test metrics:
+R2: 0.966547966003418
+MSE: 14585.4833984375
+MAPE: 0.1204795315861702
+MSE diff_p 178
+----------
+179: 0.001478186808526516
+Training Epoch 179
+train_metrics: 
+R2: 0.9747059941291809
+MSE: 9681.08984375
+MAPE: 0.09987165778875351
+test metrics:
+R2: 0.966664731502533
+MSE: 14638.43359375
+MAPE: 0.12117686867713928
+MSE diff_p 179
+----------
+180: 0.0017500583780929446
+Training Epoch 180
+train_metrics: 
+R2: 0.9677475094795227
+MSE: 11461.658203125
+MAPE: 0.10394537448883057
+test metrics:
+R2: 0.9669584035873413
+MSE: 14523.7900390625
+MAPE: 0.12019350379705429
+MSE diff_p 180
+----------
+181: 0.001563142635859549
+Training Epoch 181
+train_metrics: 
+R2: 0.9728427529335022
+MSE: 10237.490234375
+MAPE: 0.09774214029312134
+test metrics:
+R2: 0.9689620733261108
+MSE: 13764.2099609375
+MAPE: 0.11733932793140411
+MSE diff_p 181
+----------
+182: 0.001277657807804644
+Training Epoch 182
+train_metrics: 
+R2: 0.9755085110664368
+MSE: 8367.765625
+MAPE: 0.09043334424495697
+test metrics:
+R2: 0.967333972454071
+MSE: 14514.4765625
+MAPE: 0.12014336884021759
+MSE diff_p 182
+----------
+183: 0.001662297872826457
+Training Epoch 183
+train_metrics: 
+R2: 0.9717864990234375
+MSE: 10886.888671875
+MAPE: 0.0998479425907135
+test metrics:
+R2: 0.9679664373397827
+MSE: 14029.7265625
+MAPE: 0.11829007416963577
+MSE diff_p 183
+----------
+184: 0.0018380682449787855
+Training Epoch 184
+train_metrics: 
+R2: 0.9690454602241516
+MSE: 12038.0625
+MAPE: 0.11184601485729218
+test metrics:
+R2: 0.9643662571907043
+MSE: 15867.3095703125
+MAPE: 0.12922585010528564
+MSE diff_p 184
+----------
+185: 0.0014321031048893929
+Training Epoch 185
+train_metrics: 
+R2: 0.9728434681892395
+MSE: 9379.275390625
+MAPE: 0.10973884165287018
+test metrics:
+R2: 0.9696251749992371
+MSE: 13513.18359375
+MAPE: 0.11674272269010544
+MSE diff_p 185
+----------
+186: 0.0018671737052500248
+Training Epoch 186
+train_metrics: 
+R2: 0.9668870568275452
+MSE: 12228.681640625
+MAPE: 0.10215563327074051
+test metrics:
+R2: 0.9635997414588928
+MSE: 16033.783203125
+MAPE: 0.13052989542484283
+MSE diff_p 186
+----------
+187: 0.0015436848625540733
+Training Epoch 187
+train_metrics: 
+R2: 0.9705390930175781
+MSE: 10110.056640625
+MAPE: 0.10261303186416626
+test metrics:
+R2: 0.9704030156135559
+MSE: 13387.6650390625
+MAPE: 0.1160992905497551
+MSE diff_p 187
+----------
+188: 0.0017956472001969814
+Training Epoch 188
+train_metrics: 
+R2: 0.9702292680740356
+MSE: 11760.232421875
+MAPE: 0.09637206792831421
+test metrics:
+R2: 0.9651086926460266
+MSE: 15527.3798828125
+MAPE: 0.12531256675720215
+MSE diff_p 188
+----------
+189: 0.0018416953971609473
+Training Epoch 189
+train_metrics: 
+R2: 0.9628170132637024
+MSE: 12061.8173828125
+MAPE: 0.09053429961204529
+test metrics:
+R2: 0.970618486404419
+MSE: 13339.8427734375
+MAPE: 0.11572211980819702
+MSE diff_p 189
+----------
+190: 0.0013821697793900967
+Training Epoch 190
+train_metrics: 
+R2: 0.9736349582672119
+MSE: 9052.244140625
+MAPE: 0.09888288378715515
+test metrics:
+R2: 0.9651334285736084
+MSE: 15515.3486328125
+MAPE: 0.12802346050739288
+MSE diff_p 190
+----------
+191: 0.0017011119052767754
+Training Epoch 191
+train_metrics: 
+R2: 0.9684972167015076
+MSE: 11141.09375
+MAPE: 0.11693042516708374
+test metrics:
+R2: 0.970556914806366
+MSE: 13309.8798828125
+MAPE: 0.1188313290476799
+MSE diff_p 191
+----------
+192: 0.001651386613957584
+Training Epoch 192
+train_metrics: 
+R2: 0.9693238735198975
+MSE: 10815.4267578125
+MAPE: 0.10162736475467682
+test metrics:
+R2: 0.9594025015830994
+MSE: 17797.630859375
+MAPE: 0.14350463449954987
+MSE diff_p 192
+----------
+193: 0.0017520562978461385
+Training Epoch 193
+train_metrics: 
+R2: 0.9669647812843323
+MSE: 11474.744140625
+MAPE: 0.1108662337064743
+test metrics:
+R2: 0.9706760048866272
+MSE: 13229.3095703125
+MAPE: 0.11940455436706543
+MSE diff_p 193
+----------
+194: 0.0022654205095022917
+Training Epoch 194
+train_metrics: 
+R2: 0.9591453075408936
+MSE: 14836.919921875
+MAPE: 0.1039595976471901
+test metrics:
+R2: 0.959952712059021
+MSE: 18097.767578125
+MAPE: 0.14099913835525513
+MSE diff_p 194
+----------
+195: 0.0023181524593383074
+Training Epoch 195
+train_metrics: 
+R2: 0.9572616815567017
+MSE: 15182.275390625
+MAPE: 0.14441704750061035
+test metrics:
+R2: 0.96738201379776
+MSE: 14543.3115234375
+MAPE: 0.1329159289598465
+MSE diff_p 195
+----------
+196: 0.0026394175365567207
+Training Epoch 196
+train_metrics: 
+R2: 0.9506317377090454
+MSE: 17286.33984375
+MAPE: 0.11612924188375473
+test metrics:
+R2: 0.9547624588012695
+MSE: 19822.9375
+MAPE: 0.1532205194234848
+MSE diff_p 196
+----------
+197: 0.002265092683956027
+Training Epoch 197
+train_metrics: 
+R2: 0.9598300457000732
+MSE: 14834.771484375
+MAPE: 0.14993096888065338
+test metrics:
+R2: 0.9670713543891907
+MSE: 14718.03515625
+MAPE: 0.1357712745666504
+MSE diff_p 197
+----------
+198: 0.0015124449273571372
+Training Epoch 198
+train_metrics: 
+R2: 0.9748717546463013
+MSE: 9905.45703125
+MAPE: 0.10218073427677155
+test metrics:
+R2: 0.9621515870094299
+MSE: 16747.404296875
+MAPE: 0.13588251173496246
+MSE diff_p 198
+----------
+199: 0.0015388181200250983
+Training Epoch 199
+train_metrics: 
+R2: 0.9710137844085693
+MSE: 10078.181640625
+MAPE: 0.10033628344535828
+test metrics:
+R2: 0.9697262048721313
+MSE: 13537.412109375
+MAPE: 0.11606322973966599
+MSE diff_p 199
+----------

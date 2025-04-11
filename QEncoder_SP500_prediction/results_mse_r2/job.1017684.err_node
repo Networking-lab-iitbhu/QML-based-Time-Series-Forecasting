@@ -1,0 +1,533 @@
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/modules/sentiment_analysis_circuits.py:27: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  e_weights = torch.tensor(trained_encoder.weights.detach(), requires_grad=False)
+Traceback (most recent call last):
+  File "/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/./main.py", line 72, in <module>
+    train(
+  File "/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/train_loop.py", line 77, in train
+    test_acc = accuracy(np.array(out.detach()), np.array(test_labels_batch.detach()), "val acc: ")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/train_loop.py", line 8, in accuracy
+    r2 = r2_score(y, y_hat)
+         ^^^^^^^^^^^^^^^^^^
+  File "/home/soumyadeep.das.cse21.itbhu/.local/lib/python3.11/site-packages/sklearn/utils/_param_validation.py", line 213, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/soumyadeep.das.cse21.itbhu/.local/lib/python3.11/site-packages/sklearn/metrics/_regression.py", line 1204, in r2_score
+    _, y_true, y_pred, multioutput = _check_reg_targets(
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/soumyadeep.das.cse21.itbhu/.local/lib/python3.11/site-packages/sklearn/metrics/_regression.py", line 112, in _check_reg_targets
+    y_true = check_array(y_true, ensure_2d=False, dtype=dtype)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/soumyadeep.das.cse21.itbhu/.local/lib/python3.11/site-packages/sklearn/utils/validation.py", line 1087, in check_array
+    raise ValueError(
+ValueError: Found array with 0 sample(s) (shape=(0,)) while a minimum of 1 is required.
