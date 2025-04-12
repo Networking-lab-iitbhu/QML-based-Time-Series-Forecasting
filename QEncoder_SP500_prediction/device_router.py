@@ -133,7 +133,7 @@ import pennylane as qml
     
 #     return dev
 def route_device(args, noise_level='medium'):
-    n_qubits = args.num_latent + 2 * args.num_trash + 1
+    n_qubits = args.num_latent + 2* args.num_trash + 1
     dev = qml.device("default.qubit", wires=n_qubits)
 
     return dev

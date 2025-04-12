@@ -589,56 +589,14 @@ class AutoEncoder(nn.Module):
            torch.float32
       )[:, 1]
 
-# Training function with backpropagation
-# def train_encoder(flattened, args):
-#     print("\n🔹 Starting Fresh Training for Encoder...\n", flush=True)
-
-#     enc = AutoEncoder(args)
-#     opt = optim.SGD(enc.parameters(), lr=args.lr)
-
-#     for i in range(1, 301): #301 actual
-#         train_indices = np.random.randint(0, len(flattened), (args.batch_size,))
-#         features = torch.tensor(np.array([flattened[x] for x in train_indices]), dtype=torch.float32)
-
-#         enc.zero_grad()
-#         out = enc(features)
-#         print(f"Iteration {i}: Output - {out}")
-
-#         #out = torch.tensor(out, dtype=torch.float32)  # Convert QNode output to tensor
-
-
-#         # Compute the loss (sum of probabilities for simplicity)
-#         loss = torch.sum(out)  # Example loss calculation
-#         loss.backward()
-
-#         print(f"Encoder Loss: {round(float(loss / args.batch_size), 3)} Iteration: {i}", flush=True)
-#         opt.step()
-
-#         if i % 50 == 0:
-#             torch.save(enc.state_dict(), "trained_encoder_new.pth")
-#             print(f"💾 Model saved at iteration {i} as 'trained_encoder_new.pth'")
-
-#     # Final save
-#     torch.save(enc.state_dict(), "trained_encoder_new.pth")
-#     print("\n✅ Encoder model saved as 'trained_encoder_new.pth' after 300 iterations.\n")
-
-#     return enc
-
-
-def train_encoder(flattened, args, start_iter=151):
-    print(f"\n🔹 Resuming Training from Iteration {start_iter}...\n", flush=True)
+#Training function with backpropagation
+def train_encoder(flattened, args):
+    print("\n🔹 Starting Fresh Training for Encoder...\n", flush=True)
 
     enc = AutoEncoder(args)
-    if os.path.exists("trained_encoder_new.pth"):
-        enc.load_state_dict(torch.load("trained_encoder_new.pth"))
-        print("✅ Loaded trained encoder from 'trained_encoder_new.pth'.")
-    else:
-        print("⚠️ No saved model found. Starting fresh training from iteration 1.")
-        start_iter = 1  # If no saved model, start from scratch
-
     opt = optim.SGD(enc.parameters(), lr=args.lr)
 
-    for i in range(start_iter, 301):  # Resume from `start_iter`
+    for i in range(1, 301): #301 actual
         train_indices = np.random.randint(0, len(flattened), (args.batch_size,))
         features = torch.tensor(np.array([flattened[x] for x in train_indices]), dtype=torch.float32)
 
@@ -646,6 +604,10 @@ def train_encoder(flattened, args, start_iter=151):
         out = enc(features)
         print(f"Iteration {i}: Output - {out}")
 
+        #out = torch.tensor(out, dtype=torch.float32)  # Convert QNode output to tensor
+
+
+        # Compute the loss (sum of probabilities for simplicity)
         loss = torch.sum(out)  # Example loss calculation
         loss.backward()
 
@@ -656,10 +618,16 @@ def train_encoder(flattened, args, start_iter=151):
             torch.save(enc.state_dict(), "trained_encoder_new.pth")
             print(f"💾 Model saved at iteration {i} as 'trained_encoder_new.pth'")
 
+    # Final save
     torch.save(enc.state_dict(), "trained_encoder_new.pth")
     print("\n✅ Encoder model saved as 'trained_encoder_new.pth' after 300 iterations.\n")
 
     return enc
 
+
+
 # 🔹 Uncomment below lines to load model when needed
 # trained_encoder = load_trained_encoder(args)
+
+# from here new code starts
+
