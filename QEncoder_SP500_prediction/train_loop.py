@@ -2,294 +2,141 @@ from pennylane import numpy as np
 import torch
 import torch.optim as optim
 import boto3
-from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_percentage_error
 import os 
+import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_percentage_error, mean_absolute_error
 
+BASE_DIR="./QEncoder_SP500_prediction/"
 
-def accuracy(y, y_hat, w=""):
+def accuracy(y, y_hat):
     r2 = r2_score(y, y_hat)
-    mse = mean_squared_error(y*2559.16015625, y_hat*2559.16015625)
+    mse = mean_squared_error(y * 2559.16015625, y_hat * 2559.16015625)
+    mae = mean_absolute_error(y * 2559.16015625, y_hat * 2559.16015625)
     mape = mean_absolute_percentage_error(y, y_hat)
-    print(f"R2: {r2}\nMSE: {mse}\nMAPE: {mape}", flush=True)
-    return mse
+    
+    return r2, mse, mae, mape
 
-# os.makedirs("C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/losses", exist_ok=True)
-
-# # Use absolute path
-
-
-# def train(
-#     model,
-#     pca_glove_train,
-#     labels_train,
-#     pca_glove_test,
-#     labels_test,
-#     pca_glove_val,
-#     labels_val,
-#     args,
-# ):
-#     if args.aws == 'on':
-#         s3 = boto3.client('s3')
-#     print("Training Started... ", flush=True)
-#     losses = []
-#     accuracies = []
-#     start = 0
-#     opt = optim.RMSprop(model.parameters(), lr=args.lr)
-#     experiment = f"{args.dataset}_{args.model}_{args.loss}_{args.depth}_{args.sentence_len}_{args.num_latent}_{args.num_trash}_{args.pad_mode}_{args.version}_{args.anz_set}"
-
-#     if args.mode == "checkpoint":
-#         checkpoint = torch.load(f"{experiment}_weights")
-#         print(checkpoint.keys(), flush=True)
-#         start = checkpoint["epoch"]
-#         losses = checkpoint["losses"]
-#         accuracies = checkpoint["accuracies"]
-#         opt.load_state_dict(checkpoint["optimizer_state_dict"])
-#         model.load_state_dict(checkpoint["model_state_dict"])
-#     if args.loss == "BCE":
-#         loss_fun = torch.nn.BCELoss()
-#     elif args.loss == "MSE":
-#         loss_fun = torch.nn.MSELoss()
-#     else:
-#         print("Loss function not implemented", flush=True)
-
-#     for i in range(start, args.train_iter): #args.train_iter
-#         model.zero_grad()
-#         train_indecies = np.random.randint(0, len(pca_glove_train), (args.batch_size,))
-#         train_labels = torch.tensor([labels_train[x] for x in train_indecies]).to(
-#             torch.float32
-#         )
-#         features = [pca_glove_train[x][: args.sentence_len] for x in train_indecies]
-#         out = model(features)
-#         loss = loss_fun(out, train_labels)
-#         loss.backward()
-#         print(f"{i}: {loss}", flush=True)
-#         losses.append(loss.detach().numpy())
-#         np.save(f"C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/losses/experiment_losses_{experiment}", losses)
-#         if args.aws == 'on':
-#             s3.upload_file(
-#             "C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/losses/experiment_losses_{experiment}.npy",
-#             args.s3_bucket,
-#             f"evaluation_results/losses/experiment_losses_{experiment}.npy"
-#             )
-#         if i % args.eval_every == 0:
-#             test_indecies = range(min(args.test_size, len(labels_test)))
-#             test_labels_batch = torch.tensor(labels_test[: args.test_size]).to(
-#                 torch.float32
-#             )
-#             test_features = torch.tensor(np.array([
-#                 pca_glove_test[x][: args.sentence_len] for x in test_indecies
-#             ]))
-#             print(f"Training Epoch {i}", flush=True)
-#             print("train_metrics: ", flush=True)
-#             train_acc = accuracy(np.array(out.detach()), np.array(train_labels.detach()), "train acc: ")
-#             out = model(test_features)
-#             print("test metrics:", flush=True)
-#             test_acc = accuracy(np.array(out.detach()), np.array(test_labels_batch.detach()), "val acc: ")
-
-#             # free up memory
-#             del test_labels_batch
-#             del test_features
-#             del test_indecies
-#             del features
-#             del train_indecies
-
-#             if i == 0 or test_acc >= max(accuracies) or "lambeq" in args.dataset:
-#                 val_indecies = range(min(args.test_size, len(labels_val)))
-#                 print("before val features", flush=True)
-#                 # val_features = [
-#                 #     pca_glove_val[x][: args.sentence_len] for x in val_indecies
-#                 # ]
-#                 # print("before val labels", flush=True)
-#                 # val_labels = torch.tensor(labels_val[: args.test_size]).to(
-#                 #     torch.float32
-#                 # )
-#                 # print("before model out: ", len(val_features), len(val_labels), len(test_features), flush=True)
-#                 # out = model(val_features)
-#                 val_acc = 0.67
-#                 val_dict = {"train_iter": i, "val_acc": val_acc}
-#                 np.save(
-#                 f"C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/accs/val_dict_{experiment}.npy",
-#                 val_dict
-#                 )
-
-#                 if args.aws == 'on':
-#                     s3.upload_file(
-#                     f"C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/accs/val_dict_{experiment}.npy",
-#                     args.s3_bucket,
-#                     f"evaluation_results/accs/val_dict_{experiment}.npy"
-#                     )
-                  
-#                 torch.save(
-#                     {
-#                      "epoch": i,
-#                      "model_state_dict": model.state_dict(),
-#                      "optimizer_state_dict": opt.state_dict(),
-#                      "losses": losses,
-#                      "accuracies": accuracies,
-#                     },
-#                     f"C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/weights/{experiment}_weights",
-#                     )
-
-#                 if args.aws == 'on':
-#                     s3.upload_file(
-#                     f"C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/weights/{experiment}_weights",
-#                     args.s3_bucket,
-#                     f"evaluation_results/weights/{experiment}_weights"
-#                 )
-
-#             accuracies.append(test_acc)
-
-#             np.save(
-#             f"C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/accs/acc_{experiment}.npy",
-#             accuracies
-#             )
-
-#             if args.aws == 'on':
-#                 s3.upload_file(
-#                 f"C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/evaluation_results/accs/acc_{experiment}.npy",
-#                 args.s3_bucket,
-#                 f"evaluation_results/accs/acc_{experiment}.npy"
-#                 )
-
-#             print(args.loss, args.model, i, flush=True)
-#             print("----------", flush=True)
-
-#         opt.step()
-
-#     out = model(torch.tensor(pca_glove_test))
-#     accuracy(labels_test, np.array(out.detach()))
-
-#     np.save(
-#     "C:/Users/geeth/Downloads/quantum-ml-main/quantum-ml-main/QEncoder_SP500_prediction/test_res.npy",
-#     np.array(out.detach())
-#      )
-
-#     return model
-
-import os
-import numpy as np
-import torch
-import torch.optim as optim
-import boto3
 
 def train(
     model,
-    pca_glove_train,
+    train_set,
     labels_train,
-    pca_glove_test,
+    test_set,
     labels_test,
-    pca_glove_val,
+    validation_set,
     labels_val,
     args,
 ):
-    os.makedirs("evaluation_results/losses", exist_ok=True)
-    os.makedirs("evaluation_results/accs", exist_ok=True)
-    os.makedirs("evaluation_results/weights", exist_ok=True)
-    
     if args.aws == 'on':
         s3 = boto3.client('s3')
-    
-    print("Training Started...", flush=True)
-    losses, accuracies = [], []
+
+    print("Training Started... ", flush=True)
+
+    losses, r2_scores, mses, maes, mapes = [], [], [], [], []
     start = 0
     opt = optim.RMSprop(model.parameters(), lr=args.lr)
-    experiment = f"{args.dataset}_{args.model}_{args.loss}_{args.depth}_{args.sentence_len}_{args.num_latent}_{args.num_trash}_{args.pad_mode}_{args.version}_{args.anz_set}"
 
-    if args.mode == "checkpoint":
-        checkpoint = torch.load(f"evaluation_results/weights/{experiment}_weights")
-        start = checkpoint["epoch"]
-        losses = checkpoint["losses"]
-        accuracies = checkpoint["accuracies"]
-        opt.load_state_dict(checkpoint["optimizer_state_dict"])
-        model.load_state_dict(checkpoint["model_state_dict"])
-    
-    loss_fun = torch.nn.BCELoss() if args.loss == "BCE" else torch.nn.MSELoss()
-    
+    # Define the experiment directory
+    experiment_dir = os.path.expanduser("~/quantum-ml-main/QEncoder_SP500_prediction")
+
+    # Ensure the directory exists
+    os.makedirs(experiment_dir, exist_ok=True)
+    evaluation_results_dir = os.path.join(experiment_dir, "evaluation_results")
+    os.makedirs(evaluation_results_dir, exist_ok=True)
+    os.makedirs(os.path.join(evaluation_results_dir, "accs"), exist_ok=True)
+    os.makedirs(os.path.join(evaluation_results_dir, "losses"), exist_ok=True)
+    os.makedirs(os.path.join(evaluation_results_dir, "weights"), exist_ok=True)
+
+
+    experiment = f"{args.dataset}_{args.model}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}_{args.pad_mode}_{args.version}_{args.anz_set}"
+
+    if args.loss == "BCE":
+        loss_fun = torch.nn.BCELoss()
+    elif args.loss == "MSE":
+        loss_fun = torch.nn.MSELoss()
+    else:
+        print("Loss function not implemented", flush=True)
+
     for i in range(start, args.train_iter):
         model.zero_grad()
-        train_indices = np.random.randint(0, len(pca_glove_train), (args.batch_size,))
-        train_labels = torch.tensor([labels_train[x] for x in train_indices], dtype=torch.float32)
-        features = [pca_glove_train[x][: args.sentence_len] for x in train_indices]
-        
-        out = model(features)
+        train_indices = np.random.randint(0, len(train_set), (args.batch_size,))
+        #batch_size=256 ,train_indices = random 256 indices from training set.
+        train_labels = torch.tensor([labels_train[x] for x in train_indices]).to(torch.float32)
+        features = [train_set[x][: args.n_cells] for x in train_indices]
+        out = model(features) #out = probability of 0th qubit collapsing to 0 (refer to classification_model.py)
+
         loss = loss_fun(out, train_labels)
         loss.backward()
-        
-        print(f"{i}: {loss}", flush=True)
+
+        # Training set metrics
+        r2_train, mse_train, mae_train, mape_train = accuracy(np.array(train_labels.detach()), np.array(out.detach()))
+        print(f"Training {i}: Loss={loss}, R2={r2_train}, MSE={mse_train}, MAE={mae_train}, MAPE={mape_train}", flush=True)
+
         losses.append(loss.detach().numpy())
-        np.save(f"evaluation_results/losses/experiment_losses_{experiment}.npy", losses)
-        
+
         if args.aws == 'on':
-            s3.upload_file(f"evaluation_results/losses/experiment_losses_{experiment}.npy", args.s3_bucket, f"evaluation_results/losses/experiment_losses_{experiment}.npy")
-        
+            s3.upload_file(f'{experiment_dir}/evaluation_results/losses/experiment_losses_{experiment}.npy', args.s3_bucket, f'evaluation_results/losses/experiment_losses_{experiment}.npy')
+
         if i % args.eval_every == 0:
-            test_indices = range(min(args.test_size, len(labels_test)))
-            test_labels_batch = torch.tensor(labels_test[: args.test_size], dtype=torch.float32)
-            test_features = torch.tensor([pca_glove_test[x][: args.sentence_len] for x in test_indices])
-            
-            print(f"Training Epoch {i}", flush=True)
-            train_acc = accuracy(np.array(out.detach()), np.array(train_labels.detach()), "train acc: ")
-            out = model(test_features)
-            test_acc = accuracy(np.array(out.detach()), np.array(test_labels_batch.detach()), "val acc: ")
-            
-            val_acc = 0.67
-            val_dict = {"train_iter": i, "val_acc": val_acc}
-            np.save(f"evaluation_results/accs/val_dict_{experiment}.npy", val_dict)
-            
-            if args.aws == 'on':
-                s3.upload_file(f"evaluation_results/accs/val_dict_{experiment}.npy", args.s3_bucket, f"evaluation_results/accs/val_dict_{experiment}.npy")
-            
-            torch.save({
-                "epoch": i,
-                "model_state_dict": model.state_dict(),
-                "optimizer_state_dict": opt.state_dict(),
-                "losses": losses,
-                "accuracies": accuracies,
-            }, f"evaluation_results/weights/{experiment}_weights")
-            
-            if args.aws == 'on':
-                s3.upload_file(f"evaluation_results/weights/{experiment}_weights", args.s3_bucket, f"evaluation_results/weights/{experiment}_weights")
-            
-            accuracies.append(test_acc)
-            np.save(f"evaluation_results/accs/acc_{experiment}.npy", accuracies)
-            
-            if args.aws == 'on':
-                s3.upload_file(f"evaluation_results/accs/acc_{experiment}.npy", args.s3_bucket, f"evaluation_results/accs/acc_{experiment}.npy")
-            
-            print(args.loss, args.model, i, flush=True)
-            print("----------", flush=True)
-        
+            # Evaluate on validation set
+            val_indices = np.random.randint(0, len(validation_set), (args.batch_size,))
+            val_labels = torch.tensor([labels_val[x] for x in val_indices]).to(torch.float32)
+            val_features = [validation_set[x][: args.n_cells] for x in val_indices]
+
+            # Get model output for validation
+            out_val = model(val_features)
+
+            # Validation set metrics
+            r2_val, mse_val, mae_val, mape_val = accuracy(np.array(val_labels.detach()), np.array(out_val.detach()))
+            print(f"Validation {i}: R2={r2_val}, MSE={mse_val}, MAE={mae_val}, MAPE={mape_val}", flush=True)
+
+            r2_scores.append(r2_val)
+            mses.append(mse_val)
+            maes.append(mae_val)
+            mapes.append(mape_val)
+
+            # Save best model based on validation MSE
+            if i == 0 or mse_val <= min(mses):  # Corrected comparison for mse
+                torch.save(
+                    {
+                        "epoch": i,
+                        "model_state_dict": model.state_dict(),
+                        "optimizer_state_dict": opt.state_dict(),
+                        "losses": losses,
+                        "r2_scores": r2_scores,
+                        "mses": mses,
+                        "maes": maes,
+                        "mapes": mapes
+                    },
+                    f"{experiment_dir}/evaluation_results/weights/{experiment}_weights",
+                )
+                if args.aws == 'on':
+                    s3.upload_file(f"{experiment_dir}/evaluation_results/weights/{experiment}_weights", args.s3_bucket, f"evaluation_results/weights/{experiment}_weights")
+
+            # Save metrics for plotting
+            np.save(f"{experiment_dir}/evaluation_results/accs/r2_{experiment}.npy", r2_scores)
+            np.save(f"{experiment_dir}/evaluation_results/accs/mse_{experiment}.npy", mses)
+            np.save(f"{experiment_dir}/evaluation_results/accs/mae_{experiment}.npy", maes)
+            np.save(f"{experiment_dir}/evaluation_results/accs/mape_{experiment}.npy", mapes)
+
         opt.step()
+
+    # Load the best model based on validation performance:
     
-    out = model(torch.tensor(pca_glove_test))
-    accuracy(labels_test, np.array(out.detach()))
-    np.save("evaluation_results/test_res.npy", np.array(out.detach()))
     
+    # best_checkpoint = torch.load(f"{experiment_dir}/evaluation_results/weights/{experiment}_weights",weights_only=False)
+    # model.load_state_dict(best_checkpoint["model_state_dict"])
+
+    # #Final evaluation on the test set (unseen data)
+    # out_test = model(torch.tensor(test_set))
+    
+    # r2_test, mse_test, mae_test, mape_test = accuracy(labels_test, np.array(out_test.detach()))
+   
+    # print(f"Final Test Accuracy:\nR2: {r2_test}\nMSE: {mse_test}\nMAE: {mae_test}\nMAPE: {mape_test}", flush=True)
+    # np.save(f"{experiment_dir}/evaluation_results/test_results/test_res.npy", np.array(out_test.detach()))
+   
+
+   
     return model
 
-    #             torch.save(
-    #                 {
-    #                     "epoch": i,
-    #                     "model_state_dict": model.state_dict(),
-    #                     "optimizer_state_dict": opt.state_dict(),
-    #                     "losses": losses,
-    #                     "accuracies": accuracies,
-    #                 },
-    #                 f"evaluation_results/weights/{experiment}_weights",
-    #             )
-    #             if args.aws == 'on':
-    #                 s3.upload_file(f"evaluation_results/weights/{experiment}_weights", args.s3_bucket, f"evaluation_results/weights/{experiment}_weights")
 
-    #         accuracies.append(test_acc)
-
-    #         np.save(f"evaluation_results/accs/acc_{experiment}", accuracies)
-    #         if args.aws == 'on':
-    #             s3.upload_file(f"evaluation_results/accs/acc_{experiment}.npy", args.s3_bucket, f"evaluation_results/accs/acc_{experiment}.npy")
-    #         print(args.loss, args.model, i, flush=True)
-    #         print("----------", flush=True)
-
-    #     opt.step()
-    # out = model(torch.tensor(pca_glove_test))
-    # accuracy(labels_test, np.array(out.detach()))
-    # np.save("./test_res.npy", np.array(out.detach()))
-    # return model

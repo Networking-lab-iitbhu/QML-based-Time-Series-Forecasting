@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/./main.py", line 14, in <module>
-    from dataset import (
-  File "/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/dataset.py", line 84, in <module>
-    fillxy(stock)
-  File "/home/soumyadeep.das.cse21.itbhu/quantum-ml/LexiQL/dataset.py", line 62, in fillxy
-    _, o, h, l, c, v, _ = list(stock_df.iloc[idx])
-    ^^^^^^^^^^^^^^^^^^^
-ValueError: too many values to unpack (expected 7)
