@@ -42,7 +42,7 @@ def train(
     os.makedirs(os.path.join(evaluation_results_dir, "weights"), exist_ok=True)
 
 
-    experiment = f"{args.dataset}_{args.model}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}"
+    experiment = f"{args.dataset}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}"
 
     if args.loss == "BCE":
         loss_fun = torch.nn.BCELoss()
@@ -51,7 +51,7 @@ def train(
     else:
         print("Loss function not implemented", flush=True)
 
-    for i in range(start, args.train_iter):
+    for i in range(start, 1): #args.train_iter
         model.zero_grad()
         train_indices = np.random.randint(0, len(train_set), (args.batch_size,))
         #batch_size=256 ,train_indices = random 256 indices from training set.

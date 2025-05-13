@@ -1,12 +1,14 @@
 import numpy as np
 import pandas as pd
 import os
+from sklearn.preprocessing import MinMaxScaler
 
 
 # Define base directory for loading data
 BASE_DIR = "./QEncoder_SP500_prediction/"
-datafiles_dir = os.path.join(BASE_DIR,'processed_data/') #it has X.npy,Y.npy,F.npy,tX.npy and tY.npy
-dataset_dir = os.path.join(BASE_DIR,'datasets/')
+datafiles_dir = os.path.join(BASE_DIR, 'processed_data/')  # Contains X.npy, Y.npy, F.npy, tX.npy, and tY.npy
+dataset_dir = os.path.join(BASE_DIR, 'datasets/')
+
 
 class MinMaxScaler:
     epsilon = 1e-5
@@ -22,8 +24,6 @@ class MinMaxScaler:
             return (y - mn) / rng
 
         return np.array([norm(y) for y in data])
-
-
 
 
 def load_and_split_csv(filename: str, test_ratio: float = 0.2):
@@ -45,30 +45,22 @@ def load_and_split_csv(filename: str, test_ratio: float = 0.2):
 
     # Read the CSV file into a DataFrame (table-like structure)
     df = pd.read_csv(path)
+    df=df.drop(columns=['Date'])
 
-    # Separate features and labels:
-    # df.iloc[:, :-1] selects all rows and all columns except the last one.
-    # These are the input features (e.g., open, high, low prices).
-    features = df.iloc[:, :-1].to_numpy()  # Convert to NumPy array for model use
-
-    # df.iloc[:, -1] selects the last column of the DataFrame.
-    # This is assumed to be the target or label (e.g., the closing price).
-    labels = df.iloc[:, -1].to_numpy()
+    # Separate features and labels
+    features = df.to_numpy()  # Convert to NumPy array for model use
 
     # Compute the index at which to split the data for training/testing
     split_idx = int(len(df) * (1 - test_ratio))  # e.g., if 80% train, 20% test
 
     # Training data: from start to split index
     X_train = features[:split_idx]
-    y_train = labels[:split_idx]
-
+   
     # Testing data: from split index to end
     X_test = features[split_idx:]
-    y_test = labels[split_idx:]
-
+   
     # Return the split data
-    return X_train, X_test, y_train, y_test
-
+    return X_train, X_test
 
 
 def split_features_labels(features: np.ndarray, labels: np.ndarray, val_ratio: float = 0.2):
@@ -93,92 +85,217 @@ def split_features_labels(features: np.ndarray, labels: np.ndarray, val_ratio: f
 
 
 
-
-
-# Check if numpy arrays exist
-if os.path.exists(os.path.join(datafiles_dir, "X.npy")):
-    with open(os.path.join(datafiles_dir, "X.npy"), 'rb') as f:
-        X = np.load(f)
-    with open(os.path.join(datafiles_dir, "Y.npy"), 'rb') as f:
-        Y = np.load(f)
-    with open(os.path.join(datafiles_dir, "F.npy"), 'rb') as f:
-        flattened = np.load(f)
-    with open(os.path.join(datafiles_dir, "tX.npy"), 'rb') as f:
-        tX = np.load(f)
-    with open(os.path.join(datafiles_dir, "tY.npy"), 'rb') as f:
-        tY = np.load(f)
-else:
-    # Load datasets
-    df= pd.read_csv(os.path.join(dataset_dir, "combined_dataset.csv"))
-    stocks = set(df['Name'])
-    
-    print(f'Number of stocks: {len(stocks)}')
-
+def fillxy(data):
     X = []
     Y = []
-    tX = []
-    tY = []
     window = 10
+    
+    # Apply MinMaxScaler for each feature
+    scaler = MinMaxScaler()
+    op = scaler.fit_transform(data[:, 0].reshape(-1, 1))  # Open
+    hi = scaler.fit_transform(data[:, 1].reshape(-1, 1))  # High
+    lo = scaler.fit_transform(data[:, 2].reshape(-1, 1))  # Low
+    cl = scaler.fit_transform(data[:, 3].reshape(-1, 1))  # Close
+    vo = scaler.fit_transform(data[:, 4].reshape(-1, 1))  # Volume
+    
+    # Now create windows from the scaled data
+    for i in range(len(op) - window):
+        X.append(np.column_stack((op[i:i+window], hi[i:i+window], lo[i:i+window], cl[i:i+window], vo[i:i+window])))
+        Y.append(op[i+window][0])  # Using 'Open' as the label (first column)
+        
+        #op is a 2D array so op[i+window] is like [[1]] so to get [1] we do index 0.
+    
+    return X, Y
 
-    def fillxy(stock, test=False):
-        stock_df = df[df['Name'] == stock].copy()
 
-        # Drop rows with NaNs in any of the required columns
-        stock_df = stock_df.dropna(subset=['Open', 'High', 'Low', 'Close', 'Volume'])
+def load_dataset(args):
+    """
+    Loads the dataset based on the provided argument. This function will load
+    and process the dataset, scaling features and splitting into training, 
+    validation, and test sets.
 
-        op, hi, lo, cl, vo = [], [], [], [], []
+    Args:
+        args (argparse.Namespace): Arguments containing the dataset name.
 
-        for idx in range(len(stock_df)):
-            _, o, h, l, c, v, _ = list(stock_df.iloc[idx])
-            op.append(o)
-            hi.append(h)
-            lo.append(l)
-            cl.append(c)
-            vo.append(v)
-
-        # Apply MinMaxScaler after dropping NaNs
-        op = MinMaxScaler.fit_transform(op)
-        hi = MinMaxScaler.fit_transform(hi)
-        lo = MinMaxScaler.fit_transform(lo)
-        cl = MinMaxScaler.fit_transform(cl)
-        vo = MinMaxScaler.fit_transform(vo)
-
-        for i in range(0, len(op), window):
-            if i + window >= len(op):
-                break
-            if test:
-                tX.append(np.column_stack((op[i:i+window], hi[i:i+window], lo[i:i+window], cl[i:i+window], vo[i:i+window])))
-                tY.append(op[i+window])
-            else:
-                X.append(np.column_stack((op[i:i+window], hi[i:i+window], lo[i:i+window], cl[i:i+window], vo[i:i+window])))
-                Y.append(op[i+window])
-
-    for stock in stocks:
-        if stock!= 'S&P500':
-            fillxy(stock)
+    Returns:
+        (X_train, X_val, X_test, y_train, y_val, y_test, flattened): 
+        - Processed and split feature arrays and labels.
+    """
+    if args.dataset == 'wti':
+        if os.path.exists(os.path.join(datafiles_dir, "X_wti.npy")):
+            with open(os.path.join(datafiles_dir, "X_wti.npy"), 'rb') as f:
+                X = np.load(f)
+            with open(os.path.join(datafiles_dir, "Y_wti.npy"), 'rb') as f:
+                Y = np.load(f)
+            with open(os.path.join(datafiles_dir, "F_wti.npy"), 'rb') as f:
+                flattened = np.load(f)
+            with open(os.path.join(datafiles_dir, "tX_wti.npy"), 'rb') as f:
+                tX = np.load(f)
+            with open(os.path.join(datafiles_dir, "tY_wti.npy"), 'rb') as f:
+                tY = np.load(f)
         else:
-            fillxy(stock,True)
+            X_train_raw, X_test_raw = load_and_split_csv("WTI_Offshore_Cleaned_Data.csv", test_ratio=0.5)
+            X, Y = fillxy(X_train_raw)  # For training
+            tX, tY = fillxy(X_test_raw)  # For testing
+            
+            X = np.array(X)
+            Y = np.array(Y)
+            tX = np.array(tX)
+            tY = np.array(tY)
+         
+            X = X.reshape((-1, 5, 10))
+            tX = tX.reshape((-1, 5, 10))
+            
+            print(X.shape)
+            # print(tX)
+            print(tX.shape)
+            
+            flattened = np.array(X).reshape((-1, 10))  # Flatten all the features for 10 timesteps.
+            
+            # Save numpy arrays in the correct directory
+            with open(os.path.join(datafiles_dir, "X_wti.npy"), 'wb') as f:
+                np.save(f, X)
+            with open(os.path.join(datafiles_dir, "Y_wti.npy"), 'wb') as f:
+                np.save(f, Y)
+            with open(os.path.join(datafiles_dir, "F_wti.npy"), 'wb') as f:
+                np.save(f, flattened)
+            with open(os.path.join(datafiles_dir, "tX_wti.npy"), 'wb') as f:
+                np.save(f, tX)
+            with open(os.path.join(datafiles_dir, "tY_wti.npy"), 'wb') as f:
+                np.save(f, tY)
 
-    X = np.array(X)
-    Y = np.array(Y)
-    tX = np.array(tX)
-    tY = np.array(tY)
+   
+    elif args.dataset =='nifty':
+        if os.path.exists(os.path.join(datafiles_dir, "X_nifty.npy")):
+            with open(os.path.join(datafiles_dir, "X_nifty.npy"), 'rb') as f:
+                X = np.load(f)
+            with open(os.path.join(datafiles_dir, "Y_nifty.npy"), 'rb') as f:
+                Y = np.load(f)
+            with open(os.path.join(datafiles_dir, "F_nifty.npy"), 'rb') as f:
+                flattened = np.load(f)
+            with open(os.path.join(datafiles_dir, "tX_nifty.npy"), 'rb') as f:
+                tX = np.load(f)
+            with open(os.path.join(datafiles_dir, "tY_nifty.npy"), 'rb') as f:
+                tY = np.load(f)
+        else:
+            X_train_raw, X_test_raw = load_and_split_csv("NIFTY50_Cleaned_Data.csv", test_ratio=0.5)
+            X, Y = fillxy(X_train_raw)  # For training
+            tX, tY = fillxy(X_test_raw)  # For testing
+            
+            X = np.array(X)
+            Y = np.array(Y)
+            tX = np.array(tX)
+            tY = np.array(tY)
+         
+            X = X.reshape((-1, 5, 10))
+            tX = tX.reshape((-1, 5, 10))
+            
+            print(X.shape)
+            # print(tX)
+            print(tX.shape)
+            
+            flattened = np.array(X).reshape((-1, 10))  # Flatten all the features for 10 timesteps.
+            
+            # Save numpy arrays in the correct directory
+            with open(os.path.join(datafiles_dir, "X_nifty.npy"), 'wb') as f:
+                np.save(f, X)
+            with open(os.path.join(datafiles_dir, "Y_nifty.npy"), 'wb') as f:
+                np.save(f, Y)
+            with open(os.path.join(datafiles_dir, "F_nifty.npy"), 'wb') as f:
+                np.save(f, flattened)
+            with open(os.path.join(datafiles_dir, "tX_nifty.npy"), 'wb') as f:
+                np.save(f, tX)
+            with open(os.path.join(datafiles_dir, "tY_nifty.npy"), 'wb') as f:
+                np.save(f, tY)
 
-    X = X.reshape((-1, 5, 10))
-    tX = tX.reshape((-1, 5, 10))
+    
+    elif args.dataset == 'yelp':
+        # Handle the SP500 dataset loading and processing
+        # (You can add logic here to load SP500-specific data if different from the 'yelp' dataset)
+        if os.path.exists(os.path.join(datafiles_dir, "X.npy")):
+            with open(os.path.join(datafiles_dir, "X.npy"), 'rb') as f:
+                X = np.load(f)
+            with open(os.path.join(datafiles_dir, "Y.npy"), 'rb') as f:
+                Y = np.load(f)
+            with open(os.path.join(datafiles_dir, "F.npy"), 'rb') as f:
+                flattened = np.load(f)
+            with open(os.path.join(datafiles_dir, "tX.npy"), 'rb') as f:
+                tX = np.load(f)
+            with open(os.path.join(datafiles_dir, "tY.npy"), 'rb') as f:
+                tY = np.load(f)
+            
+                
+        else:
+            # Your logic for loading and processing the SP500 dataset
+            df = pd.read_csv(os.path.join(dataset_dir, "combined_dataset.csv"))
+            stocks = set(df['Name'])
+            X = []
+            Y = []
+            tX = []
+            tY = []
+            window = 10
 
-    flattened = np.array(X).reshape((-1, 10))  #flattened is all the features for 10 timesteps.
-    print(flattened)
-    # Save numpy arrays in the correct directory
-    with open(os.path.join(datafiles_dir, "X.npy"), 'wb') as f:
-        np.save(f, X)
-    with open(os.path.join(datafiles_dir, "Y.npy"), 'wb') as f:
-        np.save(f, Y)
-    with open(os.path.join(datafiles_dir,"F.npy"), 'wb') as f:
-        np.save(f, flattened)
-    with open(os.path.join(datafiles_dir, "tX.npy"), 'wb') as f:
-        np.save(f, tX)
-    with open(os.path.join(datafiles_dir, "tY.npy"), 'wb') as f:
-        np.save(f, tY)
+            def fillxy_yelp(stock, test=False):
+                stock_df = df[df['Name'] == stock].copy()
 
+                # Drop rows with NaNs in any of the required columns
+                stock_df = stock_df.dropna(subset=['Open', 'High', 'Low', 'Close', 'Volume'])
 
+                op, hi, lo, cl, vo = [], [], [], [], []
+
+                for idx in range(len(stock_df)):
+                    _, o, h, l, c, v, _ = list(stock_df.iloc[idx])
+                    op.append(o)
+                    hi.append(h)
+                    lo.append(l)
+                    cl.append(c)
+                    vo.append(v)
+
+                # Apply MinMaxScaler after dropping NaNs
+                op = MinMaxScaler.fit_transform(op)
+                hi = MinMaxScaler.fit_transform(hi)
+                lo = MinMaxScaler.fit_transform(lo)
+                cl = MinMaxScaler.fit_transform(cl)
+                vo = MinMaxScaler.fit_transform(vo)
+
+                for i in range(0, len(op), window):
+                    if i + window >= len(op):
+                        break
+                    if test:
+                        tX.append(np.column_stack((op[i:i+window], hi[i:i+window], lo[i:i+window], cl[i:i+window], vo[i:i+window])))
+                        tY.append(op[i+window])
+                    else:
+                        X.append(np.column_stack((op[i:i+window], hi[i:i+window], lo[i:i+window], cl[i:i+window], vo[i:i+window])))
+                        Y.append(op[i+window])
+
+            for stock in stocks:
+                if stock != 'S&P500':
+                    fillxy_yelp(stock)
+                else:
+                    fillxy_yelp(stock, True)
+
+            X = np.array(X)
+            Y = np.array(Y)
+            tX = np.array(tX)
+            tY = np.array(tY)
+
+            X = X.reshape((-1, 5, 10))
+            tX = tX.reshape((-1, 5, 10))
+
+            flattened = np.array(X).reshape((-1, 10))  # Flatten all the features for 10 timesteps.
+            # Save numpy arrays in the correct directory
+            with open(os.path.join(datafiles_dir, "X.npy"), 'wb') as f:
+                np.save(f, X)
+            with open(os.path.join(datafiles_dir, "Y.npy"), 'wb') as f:
+                np.save(f, Y)
+            with open(os.path.join(datafiles_dir, "F.npy"), 'wb') as f:
+                np.save(f, flattened)
+            with open(os.path.join(datafiles_dir, "tX.npy"), 'wb') as f:
+                np.save(f, tX)
+            with open(os.path.join(datafiles_dir, "tY.npy"), 'wb') as f:
+                np.save(f, tY)
+
+    else:
+        raise ValueError(f"Unsupported dataset: {args.dataset}")
+
+    return X, Y, tX, tY, flattened

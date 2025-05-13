@@ -87,10 +87,12 @@ def autoencoder_circuit_trained(weights, args):
 
 def train_encoder(flattened, args):
     print("\n Starting Fresh Training for Encoder...\n", flush=True)
-
+     
+     
+    dataset = args.dataset
     # Check if the best model already exists, if so, load it
-    best_model_path = os.path.join(BASE_DIR, "best_encoder_weights.pth")
-    weights_text_path = os.path.join(BASE_DIR, "all_encoder_weights.txt")
+    best_model_path = os.path.join(BASE_DIR, f"{dataset}_best_encoder_weights.pth")
+    weights_text_path = os.path.join(BASE_DIR, f"{dataset}_all_encoder_weights.txt")
 
     if os.path.exists(best_model_path):
         print("Best model already exists. Skipping training...\n")
@@ -112,7 +114,7 @@ def train_encoder(flattened, args):
         with open(weights_text_path, "w") as f:
             f.write("Epoch | Weights\n")  # Header line
 
-            for i in range(1, 301):  # Train for 300 iterations
+            for i in range(1, 3):  # Train for 300 iterations
                 train_indices = np.random.randint(0, len(flattened), (args.batch_size,))
                 features = torch.tensor(np.array([flattened[x] for x in train_indices]), dtype=torch.float32)
 
@@ -143,17 +145,17 @@ def train_encoder(flattened, args):
                     print(f" New BEST model saved at iteration {i} with loss {best_loss}")
 
         # Save final model
-        torch.save(enc.state_dict(), os.path.join(BASE_DIR, "trained_encoder_final.pth"))
-        print("\n Final encoder model saved as 'trained_encoder_final.pth'\n")
-        print(f" Best model had loss {best_loss} and was saved as 'best_encoder_weights.pth'\n")
+        torch.save(enc.state_dict(), os.path.join(BASE_DIR, f"{dataset}_trained_encoder_final.pth"))
+        print(f"\n Final encoder model saved as '{dataset}_trained_encoder_final.pth'\n")
+        print(f" Best model had loss {best_loss} and was saved as '{dataset}_best_encoder_weights.pth'\n")
 
         # Save losses
-        np.save(os.path.join(BASE_DIR, "encoder_losses.npy"), losses)
-        print("All losses saved in 'encoder_losses.npy'")
+        np.save(os.path.join(BASE_DIR, f"{dataset}_encoder_losses.npy"), losses)
+        print(f"All losses saved in '{dataset}_encoder_losses.npy'")
 
         # Save all weights dictionary (optional if size is okay)
-        torch.save(all_weights, os.path.join(BASE_DIR, "all_encoder_weights.pt"))
-        print(" All epoch-wise encoder weights saved in 'all_encoder_weights.pt'")
+        torch.save(all_weights, os.path.join(BASE_DIR, f"{dataset}_all_encoder_weights.pt"))
+        print(f" All epoch-wise encoder weights saved in '{dataset}_all_encoder_weights.pt'")
 
         return enc
 
