@@ -31,7 +31,7 @@ def train(
     opt = optim.RMSprop(model.parameters(), lr=args.lr)
 
     # Define the experiment directory
-    experiment_dir = os.path.expanduser("~/quantum-ml-main/QEncoder_SP500_prediction")
+    experiment_dir = "./QEncoder_SP500_prediction/"
 
     # Ensure the directory exists
     os.makedirs(experiment_dir, exist_ok=True)
