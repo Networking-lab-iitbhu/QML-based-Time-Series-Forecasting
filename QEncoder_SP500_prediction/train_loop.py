@@ -1,17 +1,15 @@
 from pennylane import numpy as np
 import torch
 import torch.optim as optim
-import boto3
 import os 
-import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_percentage_error, mean_absolute_error
 
 BASE_DIR="./QEncoder_SP500_prediction/"
 
 def accuracy(y, y_hat):
     r2 = r2_score(y, y_hat)
-    mse = mean_squared_error(y * 2559.16015625, y_hat * 2559.16015625)
-    mae = mean_absolute_error(y * 2559.16015625, y_hat * 2559.16015625)
+    mse = mean_squared_error(y , y_hat )
+    mae = mean_absolute_error(y , y_hat)
     mape = mean_absolute_percentage_error(y, y_hat)
     
     return r2, mse, mae, mape
@@ -21,15 +19,11 @@ def train(
     model,
     train_set,
     labels_train,
-    test_set,
-    labels_test,
     validation_set,
     labels_val,
     args,
 ):
-    if args.aws == 'on':
-        s3 = boto3.client('s3')
-
+    
     print("Training Started... ", flush=True)
 
     losses, r2_scores, mses, maes, mapes = [], [], [], [], []
@@ -48,7 +42,7 @@ def train(
     os.makedirs(os.path.join(evaluation_results_dir, "weights"), exist_ok=True)
 
 
-    experiment = f"{args.dataset}_{args.model}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}_{args.pad_mode}_{args.version}_{args.anz_set}"
+    experiment = f"{args.dataset}_{args.model}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}"
 
     if args.loss == "BCE":
         loss_fun = torch.nn.BCELoss()
@@ -74,8 +68,6 @@ def train(
 
         losses.append(loss.detach().numpy())
 
-        if args.aws == 'on':
-            s3.upload_file(f'{experiment_dir}/evaluation_results/losses/experiment_losses_{experiment}.npy', args.s3_bucket, f'evaluation_results/losses/experiment_losses_{experiment}.npy')
 
         if i % args.eval_every == 0:
             # Evaluate on validation set
@@ -110,9 +102,7 @@ def train(
                     },
                     f"{experiment_dir}/evaluation_results/weights/{experiment}_weights",
                 )
-                if args.aws == 'on':
-                    s3.upload_file(f"{experiment_dir}/evaluation_results/weights/{experiment}_weights", args.s3_bucket, f"evaluation_results/weights/{experiment}_weights")
-
+                
             # Save metrics for plotting
             np.save(f"{experiment_dir}/evaluation_results/accs/r2_{experiment}.npy", r2_scores)
             np.save(f"{experiment_dir}/evaluation_results/accs/mse_{experiment}.npy", mses)

@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pennylane as qml
 from pennylane import numpy as np
 import torch
+from .encoder import autoencoder_circuit_trained
 
 
 # from https://arxiv.org/pdf/1905.10876.pdf
@@ -34,9 +35,6 @@ def circuit_7(weights, args):
             w_count += 1
 
 
-def autoencoder_circuit_trained(weights, args, features=None):
-    weights = weights.reshape(-1, args.num_latent + args.num_trash)
-    qml.BasicEntanglerLayers(weights, wires=range(args.num_latent + args.num_trash))
 
 
 
@@ -93,12 +91,7 @@ def construct_classification_circuit(args, weights, features, trained_encoder=No
             wires=range(num_latent + num_trash),
             rotation="X",
         )
-        #qml.AngleEmbedding(
-        #    inital_feature[num_trash + num_latent: (2 * num_trash + num_latent)+2],
-        #    wires=range(num_latent + num_trash+1),
-        #    rotation="Y",
-        #)
-        
+
         circuit_7(model_weights[0], args)
 
         for i in range(1, len(features)):  #this loop runs from i=1 to i=4, [len(features)=5]

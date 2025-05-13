@@ -1,4 +1,3 @@
-import sys
 import os
 import torch
 import torch.nn as nn
@@ -39,7 +38,7 @@ def construct_autoencoder_circuit(args, weights, features=None):
             )
 
         qml.BasicEntanglerLayers(weights, wires=range(args.num_latent + args.num_trash))
-
+       
 
         # Trash register and auxiliary qubit swap test
         aux_qubit = args.num_latent + 2 * args.num_trash
@@ -80,61 +79,81 @@ class AutoEncoder(nn.Module):
       )[:, 1]
 
 
+def autoencoder_circuit_trained(weights, args):
+    weights = weights.reshape(-1, args.num_latent + args.num_trash)
+    qml.BasicEntanglerLayers(weights, wires=range(args.num_latent + args.num_trash))
+
+
 
 def train_encoder(flattened, args):
     print("\n Starting Fresh Training for Encoder...\n", flush=True)
 
-    enc = AutoEncoder(args)
-    opt = optim.SGD(enc.parameters(), lr=args.lr)
+    # Check if the best model already exists, if so, load it
+    best_model_path = os.path.join(BASE_DIR, "best_encoder_weights.pth")
+    weights_text_path = os.path.join(BASE_DIR, "all_encoder_weights.txt")
 
-    best_loss = float("inf") #initialise with very high loss
-    losses = []
-    all_weights = {}
+    if os.path.exists(best_model_path):
+        print("Best model already exists. Skipping training...\n")
+        enc = AutoEncoder(args)
+        enc.load_state_dict(torch.load(best_model_path))
+        enc.eval()  # Set the model to evaluation mode
+        print(enc.weights)
+        return enc  # Return the trained encoder
+    else:
+        # If the model doesn't exist, start fresh training
+        enc = AutoEncoder(args)
+        opt = optim.SGD(enc.parameters(), lr=args.lr)
 
-    for i in range(1, 301):  #  Train for 300 iterations
-        train_indices = np.random.randint(0, len(flattened), (args.batch_size,))
-        features = torch.tensor(np.array([flattened[x] for x in train_indices]), dtype=torch.float32)
+        best_loss = float("inf")  # Initialize with a very high loss
+        losses = []
+        all_weights = {}
 
-        enc.zero_grad()
-        out = enc(features)
+        # Open the weights text file for writing (create if doesn't exist)
+        with open(weights_text_path, "w") as f:
+            f.write("Epoch | Weights\n")  # Header line
 
-        loss = torch.sum(out)
-        loss.backward()
-        opt.step()
+            for i in range(1, 301):  # Train for 300 iterations
+                train_indices = np.random.randint(0, len(flattened), (args.batch_size,))
+                features = torch.tensor(np.array([flattened[x] for x in train_indices]), dtype=torch.float32)
 
-        current_loss = round(float(loss.item() / args.batch_size), 3)
-        losses.append(current_loss)
+                enc.zero_grad()
+                out = enc(features)
+                # print(out)
 
-        # Store weights in memory
-        all_weights[f"epoch_{i}"] = copy.deepcopy(enc.state_dict())
+                loss = torch.sum(out)
+                # print(f"LOSS:{loss}")
+                loss.backward()
+                opt.step()
 
-        print(f" Loss: {current_loss} | Iteration: {i}", flush=True)
+                current_loss = round(float(loss / args.batch_size),3)
+                losses.append(current_loss)
 
-        if current_loss < best_loss:
-            best_loss = current_loss
-            torch.save(enc.state_dict(), "best_encoder_weights.pth")
-            print(f" New BEST model saved at iteration {i} with loss {best_loss}")
+                # Store weights in memory
+                all_weights[f"epoch_{i}"] = copy.deepcopy(enc.state_dict())
 
-    # Save final model
-    torch.save(enc.state_dict(), "trained_encoder_final.pth")
-    print("\n Final encoder model saved as 'trained_encoder_final.pth'\n")
-    print(f" Best model had loss {best_loss} and was saved as 'best_encoder_weights.pth'\n")
+                print(f" Loss: {current_loss} | Iteration: {i}", flush=True)
 
-    # Save losses
-    np.save("encoder_losses.npy", losses)
-    print("All losses saved in 'encoder_losses.npy'")
+                # Write epoch and weights to the text file
+                weights_str = str(enc.state_dict())  # Convert weights dictionary to string
+                f.write(f"{i} | {weights_str}\n")
 
-    # Save all weights dictionary (optional if size is okay)
-    torch.save(all_weights, "all_encoder_weights.pt")
-    print(" All epoch-wise encoder weights saved in 'all_encoder_weights.pt'")
-    
-    
-    # To load the trained encoder:
-    # enc = AutoEncoder(args)
-    # enc.load_state_dict(torch.load(os.path.join(BASE_DIR,"best_encoder_weights.pth")))
-    # enc.eval()
-    # print(enc.weights)
-    return enc
-     
+                if current_loss < best_loss:
+                    best_loss = current_loss
+                    torch.save(enc.state_dict(), best_model_path)
+                    print(f" New BEST model saved at iteration {i} with loss {best_loss}")
 
+        # Save final model
+        torch.save(enc.state_dict(), os.path.join(BASE_DIR, "trained_encoder_final.pth"))
+        print("\n Final encoder model saved as 'trained_encoder_final.pth'\n")
+        print(f" Best model had loss {best_loss} and was saved as 'best_encoder_weights.pth'\n")
+
+        # Save losses
+        np.save(os.path.join(BASE_DIR, "encoder_losses.npy"), losses)
+        print("All losses saved in 'encoder_losses.npy'")
+
+        # Save all weights dictionary (optional if size is okay)
+        torch.save(all_weights, os.path.join(BASE_DIR, "all_encoder_weights.pt"))
+        print(" All epoch-wise encoder weights saved in 'all_encoder_weights.pt'")
+
+        return enc
 
