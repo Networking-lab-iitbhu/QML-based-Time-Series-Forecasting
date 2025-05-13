@@ -111,22 +111,7 @@ def train(
 
         opt.step()
 
-    # Load the best model based on validation performance:
     
-    
-    # best_checkpoint = torch.load(f"{experiment_dir}/evaluation_results/weights/{experiment}_weights",weights_only=False)
-    # model.load_state_dict(best_checkpoint["model_state_dict"])
-
-    # #Final evaluation on the test set (unseen data)
-    # out_test = model(torch.tensor(test_set))
-    
-    # r2_test, mse_test, mae_test, mape_test = accuracy(labels_test, np.array(out_test.detach()))
-   
-    # print(f"Final Test Accuracy:\nR2: {r2_test}\nMSE: {mse_test}\nMAE: {mae_test}\nMAPE: {mape_test}", flush=True)
-    # np.save(f"{experiment_dir}/evaluation_results/test_results/test_res.npy", np.array(out_test.detach()))
-   
-
-   
     return model
 
 
