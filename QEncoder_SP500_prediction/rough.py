@@ -55,30 +55,36 @@
 # print(data.head())
 
 
-import yfinance as yf
-import pandas as pd
+# import yfinance as yf
+# import pandas as pd
 
-# Step 1: Download NIFTY 50 index data (^NSEI)
-ticker = "^NSEI"
-data = yf.download(ticker, start="2007-09-17", end="2025-05-13", progress=False)
+# # Step 1: Download NIFTY 50 index data (^NSEI)
+# ticker = "^NSEI"
+# data = yf.download(ticker, start="2007-09-17", end="2025-05-13", progress=False)
 
-# Step 2: Reset index to get 'Date' as a column
-data = data.reset_index()
+# # Step 2: Reset index to get 'Date' as a column
+# data = data.reset_index()
 
-# Step 3: Keep only required columns and reorder them
-data = data[['Date', 'Open', 'High', 'Low', 'Close', 'Volume']]
+# # Step 3: Keep only required columns and reorder them
+# data = data[['Date', 'Open', 'High', 'Low', 'Close', 'Volume']]
 
-# Step 4: Drop rows with any missing values (especially Volume, which can be NaN for indexes)
-data = data.dropna()
+# # Step 4: Drop rows with any missing values (especially Volume, which can be NaN for indexes)
+# data = data.dropna()
 
-# Step 5: Sort by date (ascending)
-data = data.sort_values('Date')
+# # Step 5: Sort by date (ascending)
+# data = data.sort_values('Date')
 
-# Step 6: Save cleaned dataset to CSV
-data.to_csv("NIFTY50_Cleaned_Data.csv", index=False)
+# # Step 6: Save cleaned dataset to CSV
+# data.to_csv("NIFTY50_Cleaned_Data.csv", index=False)
 
-# Step 7: Show preview
-print(data.head())
+# # Step 7: Show preview
+# print(data.head())
 
 
+import numpy as np
+import os
 
+BASE_DIR = './QEncoder_SP500_prediction'
+datafiles_dir = os.path.join(BASE_DIR,'processed_data/')
+x = np.load(os.path.join(datafiles_dir,'X_wti.npy'))
+print(x[0:])

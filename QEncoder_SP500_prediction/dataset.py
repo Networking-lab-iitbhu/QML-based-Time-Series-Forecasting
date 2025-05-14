@@ -58,6 +58,7 @@ def load_and_split_csv(filename: str, test_ratio: float = 0.2):
    
     # Testing data: from split index to end
     X_test = features[split_idx:]
+    print(X_train[:5])
    
     # Return the split data
     return X_train, X_test
@@ -209,7 +210,7 @@ def load_dataset(args):
                 np.save(f, tY)
 
     
-    elif args.dataset == 'yelp':
+    elif args.dataset == 'sp500':
         # Handle the SP500 dataset loading and processing
         # (You can add logic here to load SP500-specific data if different from the 'yelp' dataset)
         if os.path.exists(os.path.join(datafiles_dir, "X.npy")):

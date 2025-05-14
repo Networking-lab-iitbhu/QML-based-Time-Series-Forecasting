@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--loss", dest="loss", type=str, default="MSE")
 parser.add_argument("--eval_every", dest="eval_every", type=int, default=1)
 parser.add_argument("--test_size", dest="test_size", type=int, default=500)
-parser.add_argument("--dataset", dest="dataset", type=str, default="yelp")
+parser.add_argument("--dataset", dest="dataset", type=str, default="sp500")
 parser.add_argument("--train_iter", dest="train_iter", type=int, default=200)
 parser.add_argument("--n_cells", dest="n_cells", type=int, default=5)  # Number of EIP cells
 parser.add_argument("--depth", dest="depth", type=int, default=2)
