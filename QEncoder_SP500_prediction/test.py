@@ -10,8 +10,8 @@ def test(
     labels_test,
 ):
     print(test_dir)
-    experiment = f"{args.dataset}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}"
-    checkpoint = torch.load(f"{test_dir}/{experiment}_weights_iteration_1",weights_only = False)
+    experiment = f"{args.dataset}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}_{args.train_iter}"
+    checkpoint = torch.load(f"{test_dir}/{experiment}_weights",weights_only = False)
     state_dict = checkpoint["model_state_dict"]
     print(checkpoint['epoch'])
     if 'p_weights' in state_dict:
