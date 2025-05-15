@@ -62,8 +62,8 @@ def construct_classification_circuit(args, weights, features, trained_encoder=No
     sentiment_dev=qml.device("default.qubit", wires=args.num_latent + 2* args.num_trash + 1)
     
 
-    if args.mode =='train':
-        qnode = qml.qnode(sentiment_dev, interface="torch", diff_method="backprop")
+    
+    qnode = qml.qnode(sentiment_dev, interface="torch", diff_method="backprop")
     
 
     @qnode
@@ -120,7 +120,8 @@ def construct_classification_circuit(args, weights, features, trained_encoder=No
         
         circuit_7(model_weights[-1], args)  #now last time just process all the data at once , final quantum layer applied before measurement
         # Measure the output
-        if args.mode == "train":
-            return qml.probs(0)
+    
+        return qml.probs(0)
+        
     
     return classification_circuit(args, weights, features, trained_encoder)

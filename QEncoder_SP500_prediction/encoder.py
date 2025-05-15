@@ -114,7 +114,7 @@ def train_encoder(flattened, args):
         with open(weights_text_path, "w") as f:
             f.write("Epoch | Weights\n")  # Header line
 
-            for i in range(1, 3):  # Train for 300 iterations
+            for i in range(1, args.encoder_train_iter): 
                 train_indices = np.random.randint(0, len(flattened), (args.batch_size,))
                 features = torch.tensor(np.array([flattened[x] for x in train_indices]), dtype=torch.float32)
 

@@ -81,10 +81,37 @@
 # print(data.head())
 
 
-import numpy as np
-import os
+# import numpy as np
+# import os
 
-BASE_DIR = './QEncoder_SP500_prediction'
-datafiles_dir = os.path.join(BASE_DIR,'processed_data/')
-x = np.load(os.path.join(datafiles_dir,'X_wti.npy'))
-print(x[0:])
+# BASE_DIR = './QEncoder_SP500_prediction'
+# datafiles_dir = os.path.join(BASE_DIR,'processed_data/')
+# x = np.load(os.path.join(datafiles_dir,'tX_wti.npy'))
+# print(x.shape)
+
+
+import torch
+import shutil
+
+# Paths (adjust accordingly)
+original_path = "./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1"
+copy_path = "./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1_copy"
+
+# Step 1: Make a copy of the original checkpoint file
+shutil.copyfile(original_path, copy_path)
+print(f"Copied checkpoint from {original_path} to {copy_path}")
+
+# Step 2: Load the copied checkpoint
+checkpoint = torch.load(copy_path,weights_only=False)
+
+# Step 3: Add or update the 'iteration' key
+checkpoint['iteration'] = 200
+
+# Step 4: Save the checkpoint back to the copied file
+torch.save(checkpoint, copy_path)
+print(f"Updated 'iteration' key in checkpoint at {copy_path}")
+
+
+check= torch.load("./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1_copy",weights_only=False)
+print(check['iteration'])
+print(check['model_state_dict']['p_weights'])

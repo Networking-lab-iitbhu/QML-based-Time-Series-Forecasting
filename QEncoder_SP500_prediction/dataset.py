@@ -26,19 +26,18 @@ class MinMaxScaler:
         return np.array([norm(y) for y in data])
 
 
-def load_and_split_csv(filename: str, test_ratio: float = 0.2):
+def load_and_split_csv(filename: str, args):
     """
-    Loads a CSV file and splits it into features and labels as NumPy arrays 
+    Loads a CSV file and splits it into features as NumPy arrays 
     for training and test sets. 
 
     Args:
         filename (str): Name of the CSV file in the datasets directory.
-        test_ratio (float): Fraction of the data to be used for testing (e.g., 0.2 means 20%).
+        args.test_ratio (float): command line argument for fraction of the data to be used for testing (e.g., 0.2 means 20%).
 
     Returns:
-        (X_train, X_test, y_train, y_test): 
+        (X_train, X_test): 
         - X_train, X_test: Feature arrays for training and testing
-        - y_train, y_test: Corresponding labels (target values)
     """
     # Full path to the CSV file
     path = os.path.join(dataset_dir, filename)
@@ -51,7 +50,7 @@ def load_and_split_csv(filename: str, test_ratio: float = 0.2):
     features = df.to_numpy()  # Convert to NumPy array for model use
 
     # Compute the index at which to split the data for training/testing
-    split_idx = int(len(df) * (1 - test_ratio))  # e.g., if 80% train, 20% test
+    split_idx = int(len(df) * (1 - args.test_ratio))  # e.g., if 80% train, 20% test
 
     # Training data: from start to split index
     X_train = features[:split_idx]
@@ -64,20 +63,20 @@ def load_and_split_csv(filename: str, test_ratio: float = 0.2):
     return X_train, X_test
 
 
-def split_features_labels(features: np.ndarray, labels: np.ndarray, val_ratio: float = 0.2):
+def split_features_labels(features: np.ndarray, labels: np.ndarray, args):
     """
     Splits features and labels into training and validation sets, maintaining alignment.
 
     Args:
         features (np.ndarray): Full feature dataset.
         labels (np.ndarray): Full label dataset.
-        val_ratio (float): Fraction to use for validation.
+        args.val_ratio (float):command line argument denoting fraction to use for validation.
 
     Returns:
         (X_train, X_val, y_train, y_val): Tuple of splits.
     """
     assert len(features) == len(labels), "Mismatch between features and labels length"
-    split_idx = int(len(features) * (1 - val_ratio))
+    split_idx = int(len(features) * (1 - args.val_ratio))
     X_train = features[:split_idx]
     X_val = features[split_idx:]
     y_train = labels[:split_idx]
@@ -119,7 +118,7 @@ def load_dataset(args):
         args (argparse.Namespace): Arguments containing the dataset name.
 
     Returns:
-        (X_train, X_val, X_test, y_train, y_val, y_test, flattened): 
+        (X_train, X_test, y_train, y_test, flattened): 
         - Processed and split feature arrays and labels.
     """
     if args.dataset == 'wti':
@@ -135,7 +134,7 @@ def load_dataset(args):
             with open(os.path.join(datafiles_dir, "tY_wti.npy"), 'rb') as f:
                 tY = np.load(f)
         else:
-            X_train_raw, X_test_raw = load_and_split_csv("WTI_Offshore_Cleaned_Data.csv", test_ratio=0.5)
+            X_train_raw, X_test_raw = load_and_split_csv("WTI_Offshore_Cleaned_Data.csv", args)
             X, Y = fillxy(X_train_raw)  # For training
             tX, tY = fillxy(X_test_raw)  # For testing
             

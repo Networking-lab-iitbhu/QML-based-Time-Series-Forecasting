@@ -19,6 +19,9 @@ parser.add_argument("--num_latent", dest="num_latent", type=int, default=4)
 parser.add_argument("--num_trash", dest="num_trash", type=int, default=6)
 parser.add_argument("--lr", dest="lr", type=float, default=0.01)
 parser.add_argument("--bs", dest="batch_size", type=int, default=256)
+parser.add_argument("--encoder_train_iter",dest="encoder_train_iter",type=int,default=300)
+parser.add_argument("--test_ratio",dest="test_ratio",type=int,default=0.5)
+parser.add_argument("--val_ratio",dest="val_ratio",type=int,default=0.2)
 args = parser.parse_args()
 
 print(f"{os.getpid()=}")
@@ -35,10 +38,11 @@ trained_encoder = train_encoder(flattened, args)
 
 # Initialize the classifier model
 model = Classifier(trained_encoder, args)
+print("Model State Dict Keys:", model.state_dict().keys())
 
 # Split the data into training, validation, and test sets
 
-train_set, validation_set, labels_train, labels_val = split_features_labels(X, Y, 0.2)
+train_set, validation_set, labels_train, labels_val = split_features_labels(X, Y, args)
 test_set, labels_test = tX, tY
 
 
@@ -58,8 +62,10 @@ if args.mode == "train":
     print(len(test_set))  # Debugging output
 
 elif args.mode == "test":
-    BASE_DIR = "./QEncoder_SP500_prediction/"
-    test_dir = os.path.join(BASE_DIR, 'evaluation_results/weights/')
+    BASE_DIR = "./QEncoder_SP500_prediction"
+    test_dir = os.path.join(BASE_DIR, 'evaluation_results', 'weights')
+    print(test_dir)
+    #print(test_set)
     test(
         model,
         args,
