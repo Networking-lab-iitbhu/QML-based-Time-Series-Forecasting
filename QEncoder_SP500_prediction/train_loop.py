@@ -39,8 +39,8 @@ def train(
     os.makedirs(os.path.join(evaluation_results_dir, "losses"), exist_ok=True)
 
     experiment = f"{args.dataset}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}"
-    latest_path = os.path.join(weights_dir, f"{experiment}_latest.pt")
-    best_path = os.path.join(weights_dir, f"{experiment}_weights_iteration_1")
+    latest_path = os.path.join(weights_dir, f"{experiment}_{args.train_iter}_latest.pt")
+    best_path = os.path.join(weights_dir, f"{experiment}_{args.train_iter}_weights")
 
     # Resume training if checkpoint exists
     start = 0
@@ -150,10 +150,10 @@ def train(
             )
 
             # Save metrics
-            np.save(os.path.join(evaluation_results_dir, f"accs/r2_{experiment}.npy"), r2_scores)
-            np.save(os.path.join(evaluation_results_dir, f"accs/mse_{experiment}.npy"), mses)
-            np.save(os.path.join(evaluation_results_dir, f"accs/mae_{experiment}.npy"), maes)
-            np.save(os.path.join(evaluation_results_dir, f"accs/mape_{experiment}.npy"), mapes)
+            np.save(os.path.join(evaluation_results_dir, f"accs/r2_{experiment}_{args.train_iter}.npy"), r2_scores)
+            np.save(os.path.join(evaluation_results_dir, f"accs/mse_{experiment}_{args.train_iter}.npy"), mses)
+            np.save(os.path.join(evaluation_results_dir, f"accs/mae_{experiment}_{args.train_iter}.npy"), maes)
+            np.save(os.path.join(evaluation_results_dir, f"accs/mape_{experiment}_{args.train_iter}.npy"), mapes)
 
             opt.step()
 

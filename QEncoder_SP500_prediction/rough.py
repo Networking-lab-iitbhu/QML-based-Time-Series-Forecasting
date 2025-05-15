@@ -90,28 +90,59 @@
 # print(x.shape)
 
 
+# import torch
+# import shutil
+
+# # Paths (adjust accordingly)
+# original_path = "./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1"
+# copy_path = "./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1_copy"
+
+# # Step 1: Make a copy of the original checkpoint file
+# shutil.copyfile(original_path, copy_path)
+# print(f"Copied checkpoint from {original_path} to {copy_path}")
+
+# # Step 2: Load the copied checkpoint
+# checkpoint = torch.load(copy_path,weights_only=False)
+
+# # Step 3: Add or update the 'iteration' key
+# checkpoint['iteration'] = 200
+
+# # Step 4: Save the checkpoint back to the copied file
+# torch.save(checkpoint, copy_path)
+# print(f"Updated 'iteration' key in checkpoint at {copy_path}")
+
+
+# check= torch.load("./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1_copy",weights_only=False)
+# print(check['iteration'])
+# print(check['model_state_dict']['p_weights'])
+
 import torch
-import shutil
+import os
 
-# Paths (adjust accordingly)
-original_path = "./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1"
-copy_path = "./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1_copy"
+# Config
+dataset = "sp500"  # <-- change this if using another dataset
+qubit_config = "4_6"  # <-- change this to match your config
+iteration_value = 300  # The iteration value you want to assign
 
-# Step 1: Make a copy of the original checkpoint file
-shutil.copyfile(original_path, copy_path)
-print(f"Copied checkpoint from {original_path} to {copy_path}")
+# Paths
+base_dir = "./QEncoder_SP500_prediction/encoder_details/"
+best_model_path = os.path.join(base_dir, f"{dataset}_best_encoder_weights_{qubit_config}.pth")
+updated_checkpoint_path = os.path.join(base_dir, f"{dataset}_best_encoder_weights_{qubit_config}_with_iter.pth")
 
-# Step 2: Load the copied checkpoint
-checkpoint = torch.load(copy_path,weights_only=False)
+# Load the original state_dict
+state_dict = torch.load(best_model_path)
 
-# Step 3: Add or update the 'iteration' key
-checkpoint['iteration'] = 200
+# Wrap into checkpoint format
+checkpoint = {
+    "model_state_dict": state_dict,
+    "optimizer_state_dict": {},  # Empty since optimizer isn't tracked for best weights
+    "losses": [],                # Optional: can be left empty
+    "best_loss": 0.0,            # Optional: set to 0 or any known best
+    "iteration": iteration_value
+}
 
-# Step 4: Save the checkpoint back to the copied file
-torch.save(checkpoint, copy_path)
-print(f"Updated 'iteration' key in checkpoint at {copy_path}")
-
-
-check= torch.load("./QEncoder_SP500_prediction/evaluation_results/weights/sp500_MSE_2_5_4_6_weights_iteration_1_copy",weights_only=False)
-print(check['iteration'])
-print(check['model_state_dict']['p_weights'])
+# Save as new checkpoint
+torch.save(checkpoint, best_model_path)
+print(f"Updated best model with 'iteration': {iteration_value} saved to:\n{best_model_path}")
+state_dict=torch.load(best_model_path,weights_only=False)
+print(state_dict['iteration'])

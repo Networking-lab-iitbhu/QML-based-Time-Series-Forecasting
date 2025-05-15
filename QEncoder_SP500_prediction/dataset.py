@@ -115,23 +115,27 @@ def load_dataset(args):
     validation, and test sets.
 
     Args:
-        args (argparse.Namespace): Arguments containing the dataset name.
+        args (argparse.Namespace): Arguments containing the dataset name and test_ratio.
 
     Returns:
         (X_train, X_test, y_train, y_test, flattened): 
         - Processed and split feature arrays and labels.
     """
+    # Format test_ratio as percentage without decimals, e.g., 0.2 -> 20
+    test_ratio_str = str(int(args.test_ratio * 100))
+
     if args.dataset == 'wti':
-        if os.path.exists(os.path.join(datafiles_dir, "X_wti.npy")):
-            with open(os.path.join(datafiles_dir, "X_wti.npy"), 'rb') as f:
+        prefix = f"wti_{test_ratio_str}"
+        if os.path.exists(os.path.join(datafiles_dir, f"X_{prefix}.npy")):
+            with open(os.path.join(datafiles_dir, f"X_{prefix}.npy"), 'rb') as f:
                 X = np.load(f)
-            with open(os.path.join(datafiles_dir, "Y_wti.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"Y_{prefix}.npy"), 'rb') as f:
                 Y = np.load(f)
-            with open(os.path.join(datafiles_dir, "F_wti.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"F_{prefix}.npy"), 'rb') as f:
                 flattened = np.load(f)
-            with open(os.path.join(datafiles_dir, "tX_wti.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"tX_{prefix}.npy"), 'rb') as f:
                 tX = np.load(f)
-            with open(os.path.join(datafiles_dir, "tY_wti.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"tY_{prefix}.npy"), 'rb') as f:
                 tY = np.load(f)
         else:
             X_train_raw, X_test_raw = load_and_split_csv("WTI_Offshore_Cleaned_Data.csv", args)
@@ -146,39 +150,36 @@ def load_dataset(args):
             X = X.reshape((-1, 5, 10))
             tX = tX.reshape((-1, 5, 10))
             
-            print(X.shape)
-            # print(tX)
-            print(tX.shape)
-            
             flattened = np.array(X).reshape((-1, 10))  # Flatten all the features for 10 timesteps.
             
-            # Save numpy arrays in the correct directory
-            with open(os.path.join(datafiles_dir, "X_wti.npy"), 'wb') as f:
+            # Save numpy arrays with test_ratio in the filename
+            with open(os.path.join(datafiles_dir, f"X_{prefix}.npy"), 'wb') as f:
                 np.save(f, X)
-            with open(os.path.join(datafiles_dir, "Y_wti.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"Y_{prefix}.npy"), 'wb') as f:
                 np.save(f, Y)
-            with open(os.path.join(datafiles_dir, "F_wti.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"F_{prefix}.npy"), 'wb') as f:
                 np.save(f, flattened)
-            with open(os.path.join(datafiles_dir, "tX_wti.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"tX_{prefix}.npy"), 'wb') as f:
                 np.save(f, tX)
-            with open(os.path.join(datafiles_dir, "tY_wti.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"tY_{prefix}.npy"), 'wb') as f:
                 np.save(f, tY)
 
-   
-    elif args.dataset =='nifty':
-        if os.path.exists(os.path.join(datafiles_dir, "X_nifty.npy")):
-            with open(os.path.join(datafiles_dir, "X_nifty.npy"), 'rb') as f:
+
+    elif args.dataset == 'nifty':
+        prefix = f"nifty_{test_ratio_str}"
+        if os.path.exists(os.path.join(datafiles_dir, f"X_{prefix}.npy")):
+            with open(os.path.join(datafiles_dir, f"X_{prefix}.npy"), 'rb') as f:
                 X = np.load(f)
-            with open(os.path.join(datafiles_dir, "Y_nifty.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"Y_{prefix}.npy"), 'rb') as f:
                 Y = np.load(f)
-            with open(os.path.join(datafiles_dir, "F_nifty.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"F_{prefix}.npy"), 'rb') as f:
                 flattened = np.load(f)
-            with open(os.path.join(datafiles_dir, "tX_nifty.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"tX_{prefix}.npy"), 'rb') as f:
                 tX = np.load(f)
-            with open(os.path.join(datafiles_dir, "tY_nifty.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"tY_{prefix}.npy"), 'rb') as f:
                 tY = np.load(f)
         else:
-            X_train_raw, X_test_raw = load_and_split_csv("NIFTY50_Cleaned_Data.csv", test_ratio=0.5)
+            X_train_raw, X_test_raw = load_and_split_csv("NIFTY50_Cleaned_Data.csv", args)
             X, Y = fillxy(X_train_raw)  # For training
             tX, tY = fillxy(X_test_raw)  # For testing
             
@@ -190,43 +191,36 @@ def load_dataset(args):
             X = X.reshape((-1, 5, 10))
             tX = tX.reshape((-1, 5, 10))
             
-            print(X.shape)
-            # print(tX)
-            print(tX.shape)
-            
             flattened = np.array(X).reshape((-1, 10))  # Flatten all the features for 10 timesteps.
             
-            # Save numpy arrays in the correct directory
-            with open(os.path.join(datafiles_dir, "X_nifty.npy"), 'wb') as f:
+            # Save numpy arrays with test_ratio in the filename
+            with open(os.path.join(datafiles_dir, f"X_{prefix}.npy"), 'wb') as f:
                 np.save(f, X)
-            with open(os.path.join(datafiles_dir, "Y_nifty.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"Y_{prefix}.npy"), 'wb') as f:
                 np.save(f, Y)
-            with open(os.path.join(datafiles_dir, "F_nifty.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"F_{prefix}.npy"), 'wb') as f:
                 np.save(f, flattened)
-            with open(os.path.join(datafiles_dir, "tX_nifty.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"tX_{prefix}.npy"), 'wb') as f:
                 np.save(f, tX)
-            with open(os.path.join(datafiles_dir, "tY_nifty.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"tY_{prefix}.npy"), 'wb') as f:
                 np.save(f, tY)
 
-    
+
     elif args.dataset == 'sp500':
-        # Handle the SP500 dataset loading and processing
-        # (You can add logic here to load SP500-specific data if different from the 'yelp' dataset)
-        if os.path.exists(os.path.join(datafiles_dir, "X.npy")):
-            with open(os.path.join(datafiles_dir, "X.npy"), 'rb') as f:
+        prefix = f"sp500_{test_ratio_str}"
+        if os.path.exists(os.path.join(datafiles_dir, f"X_{prefix}.npy")):
+            with open(os.path.join(datafiles_dir, f"X_{prefix}.npy"), 'rb') as f:
                 X = np.load(f)
-            with open(os.path.join(datafiles_dir, "Y.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"Y_{prefix}.npy"), 'rb') as f:
                 Y = np.load(f)
-            with open(os.path.join(datafiles_dir, "F.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"F_{prefix}.npy"), 'rb') as f:
                 flattened = np.load(f)
-            with open(os.path.join(datafiles_dir, "tX.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"tX_{prefix}.npy"), 'rb') as f:
                 tX = np.load(f)
-            with open(os.path.join(datafiles_dir, "tY.npy"), 'rb') as f:
+            with open(os.path.join(datafiles_dir, f"tY_{prefix}.npy"), 'rb') as f:
                 tY = np.load(f)
-            
-                
         else:
-            # Your logic for loading and processing the SP500 dataset
+            # Your existing SP500 loading and processing code unchanged
             df = pd.read_csv(os.path.join(dataset_dir, "combined_dataset.csv"))
             stocks = set(df['Name'])
             X = []
@@ -235,10 +229,8 @@ def load_dataset(args):
             tY = []
             window = 10
 
-            def fillxy_yelp(stock, test=False):
+            def fillxy_sp500(stock, test=False):
                 stock_df = df[df['Name'] == stock].copy()
-
-                # Drop rows with NaNs in any of the required columns
                 stock_df = stock_df.dropna(subset=['Open', 'High', 'Low', 'Close', 'Volume'])
 
                 op, hi, lo, cl, vo = [], [], [], [], []
@@ -251,7 +243,6 @@ def load_dataset(args):
                     cl.append(c)
                     vo.append(v)
 
-                # Apply MinMaxScaler after dropping NaNs
                 op = MinMaxScaler.fit_transform(op)
                 hi = MinMaxScaler.fit_transform(hi)
                 lo = MinMaxScaler.fit_transform(lo)
@@ -270,9 +261,9 @@ def load_dataset(args):
 
             for stock in stocks:
                 if stock != 'S&P500':
-                    fillxy_yelp(stock)
+                    fillxy_sp500(stock)
                 else:
-                    fillxy_yelp(stock, True)
+                    fillxy_sp500(stock, True)
 
             X = np.array(X)
             Y = np.array(Y)
@@ -282,17 +273,17 @@ def load_dataset(args):
             X = X.reshape((-1, 5, 10))
             tX = tX.reshape((-1, 5, 10))
 
-            flattened = np.array(X).reshape((-1, 10))  # Flatten all the features for 10 timesteps.
-            # Save numpy arrays in the correct directory
-            with open(os.path.join(datafiles_dir, "X.npy"), 'wb') as f:
+            flattened = np.array(X).reshape((-1, 10))
+            
+            with open(os.path.join(datafiles_dir, f"X_{prefix}.npy"), 'wb') as f:
                 np.save(f, X)
-            with open(os.path.join(datafiles_dir, "Y.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"Y_{prefix}.npy"), 'wb') as f:
                 np.save(f, Y)
-            with open(os.path.join(datafiles_dir, "F.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"F_{prefix}.npy"), 'wb') as f:
                 np.save(f, flattened)
-            with open(os.path.join(datafiles_dir, "tX.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"tX_{prefix}.npy"), 'wb') as f:
                 np.save(f, tX)
-            with open(os.path.join(datafiles_dir, "tY.npy"), 'wb') as f:
+            with open(os.path.join(datafiles_dir, f"tY_{prefix}.npy"), 'wb') as f:
                 np.save(f, tY)
 
     else:

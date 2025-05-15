@@ -7,14 +7,13 @@ from .dataset import load_dataset, split_features_labels
 from .test import test
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--loss", dest="loss", type=str, default="MSE")
-parser.add_argument("--eval_every", dest="eval_every", type=int, default=1)
-parser.add_argument("--test_size", dest="test_size", type=int, default=500)
-parser.add_argument("--dataset", dest="dataset", type=str, default="sp500")
+parser.add_argument("--loss", dest="loss", type=str, default="MSE") #[MSE,BCE can be used ]
+parser.add_argument("--eval_every", dest="eval_every", type=int, default=1) #[after every 'eval_every' number of iterations the model must evaluate on validation set]
+parser.add_argument("--dataset", dest="dataset", type=str, default="sp500") #["sp500","nifty","wti"]
 parser.add_argument("--train_iter", dest="train_iter", type=int, default=200)
 parser.add_argument("--n_cells", dest="n_cells", type=int, default=5)  # Number of EIP cells
 parser.add_argument("--depth", dest="depth", type=int, default=2)
-parser.add_argument("--mode", dest="mode", type=str, default="train")
+parser.add_argument("--mode", dest="mode", type=str, default="train")#["test","train"]
 parser.add_argument("--num_latent", dest="num_latent", type=int, default=4)
 parser.add_argument("--num_trash", dest="num_trash", type=int, default=6)
 parser.add_argument("--lr", dest="lr", type=float, default=0.01)
