@@ -5,7 +5,7 @@ import torch.optim as optim
 import pennylane as qml
 from pennylane import numpy as np
 import copy
-BASE_DIR = "./QEncoder_SP500_prediction/encoder_details_latent_4_trash_6/"
+BASE_DIR = "./QEncoder_SP500_prediction/encoder_details/"
 
 
 print("encoder.py is running...")
@@ -90,9 +90,11 @@ def train_encoder(flattened, args):
      
      
     dataset = args.dataset
+    qubit_config = f"{args.num_latent}_{args.num_trash}"
+    
     # Check if the best model already exists, if so, load it
-    best_model_path = os.path.join(BASE_DIR, f"{dataset}_best_encoder_weights.pth")
-    weights_text_path = os.path.join(BASE_DIR, f"{dataset}_all_encoder_weights.txt")
+    best_model_path = os.path.join(BASE_DIR, f"{dataset}_best_encoder_weights_{qubit_config}.pth")
+    weights_text_path = os.path.join(BASE_DIR, f"{dataset}_all_encoder_weights_{qubit_config}.txt")
 
     if os.path.exists(best_model_path):
         print("Best model already exists. Skipping training...\n")
@@ -145,17 +147,17 @@ def train_encoder(flattened, args):
                     print(f" New BEST model saved at iteration {i} with loss {best_loss}")
 
         # Save final model
-        torch.save(enc.state_dict(), os.path.join(BASE_DIR, f"{dataset}_trained_encoder_final.pth"))
-        print(f"\n Final encoder model saved as '{dataset}_trained_encoder_final.pth'\n")
-        print(f" Best model had loss {best_loss} and was saved as '{dataset}_best_encoder_weights.pth'\n")
+        torch.save(enc.state_dict(), os.path.join(BASE_DIR, f"{dataset}_trained_encoder_final_{qubit_config}.pth"))
+        print(f"\n Final encoder model saved as '{dataset}_trained_encoder_final_{qubit_config}.pth'\n")
+        print(f" Best model had loss {best_loss} and was saved as '{dataset}_best_encoder_weights_{qubit_config}.pth'\n")
 
         # Save losses
-        np.save(os.path.join(BASE_DIR, f"{dataset}_encoder_losses.npy"), losses)
-        print(f"All losses saved in '{dataset}_encoder_losses.npy'")
+        np.save(os.path.join(BASE_DIR, f"{dataset}_encoder_losses_{qubit_config}.npy"), losses)
+        print(f"All losses saved in '{dataset}_encoder_losses_{qubit_config}.npy'")
 
         # Save all weights dictionary (optional if size is okay)
-        torch.save(all_weights, os.path.join(BASE_DIR, f"{dataset}_all_encoder_weights.pt"))
-        print(f" All epoch-wise encoder weights saved in '{dataset}_all_encoder_weights.pt'")
+        torch.save(all_weights, os.path.join(BASE_DIR, f"{dataset}_all_encoder_weights_{qubit_config}.pt"))
+        print(f" All epoch-wise encoder weights saved in '{dataset}_all_encoder_weights_{qubit_config}.pt'")
 
         return enc
 

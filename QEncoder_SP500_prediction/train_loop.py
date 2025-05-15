@@ -40,7 +40,7 @@ def train(
 
     experiment = f"{args.dataset}_{args.loss}_{args.depth}_{args.n_cells}_{args.num_latent}_{args.num_trash}"
     latest_path = os.path.join(weights_dir, f"{experiment}_latest.pt")
-    best_path = os.path.join(weights_dir, f"{experiment}_weights")
+    best_path = os.path.join(weights_dir, f"{experiment}_weights_iteration_1")
 
     # Resume training if checkpoint exists
     start = 0
